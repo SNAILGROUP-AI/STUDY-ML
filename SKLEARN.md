@@ -1,16 +1,14 @@
-# [Scikit-Learn Library](https://scikit-learn.org/stable/#)  
+# [Scikit-Learn Library](https://scikit-learn.org/stable/#)
 
----
-
-## 정의  
-
-### 정의
+<details><summary><h3>정의</h3></summary>
 
 - 머신러닝 기술을 통일된 인터페이스로써 활용할 수 있도록 정리한 라이브러리  
 
 - 머신러닝 알고리즘, 머신러닝 개발을 위한 프레임워크 및 API 제공  
 
-### API 사용 방법
+</details>
+
+<details><summary><h3>API 사용 방법</h3></summary>
 
 - 적절한 estimator 클래스를 임포트
 
@@ -24,13 +22,7 @@
 
 - 인스턴스의 메소드 `predict()`을 통해 훈련된 인스턴스에 테스트용 데이터를 적용함
 
-### [권장 사항](https://scikit-learn.org/stable/modules/classes.html)
-
-![이미지](https://scikit-learn.org/stable/_static/ml_map.png)
-
----
-
-## 주요 모듈
+</details>
 
 <details><summary><h3>주요 모듈</h3></summary>
 
@@ -88,5 +80,11 @@
 | target | 반응 변수 |
 | feature_names | 설명 변수 이름 리스트 |
 | target_names | 반응 변수 이름 리스트 |
+
+</details>
+
+<details><summary><h3>[권장 사항](https://scikit-learn.org/stable/modules/classes.html)</h3></summary>
+
+![이미지](https://scikit-learn.org/stable/_static/ml_map.png)
 
 </details>
