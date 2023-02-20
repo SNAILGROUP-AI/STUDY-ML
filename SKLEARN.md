@@ -46,44 +46,44 @@
 
 </details>
 
-<details><summary><h3>sklearn.datasets 내장 데이터 셋</h3></summary>
+<details><summary><h3>`sklearn.datasets`</h3></summary>
 
-| 데이터 로드 함수 | 데이터 | 참고 |
-|------|------|------|
-| load_boston | 보스턴 집값 | 내장 데이터  |
-| load_diabetes | 당뇨병 |  |
-| load_linnerud | linnerud |  |
-| load_iris | 붓꽃 |  |
-| load_digits | 필기 숫자(digit) 이미지 |  |
-| load_wine | 포도주(wine) 등급 |  |
-| load_breast_cancer | 유방암 진단 |  |
-| fetch_california_housing | 캘리포니아 집값 | 인터넷 다운로드 |
-| fetch_covtype | 토지조사 |  |
-| fetch_20newsgroups | 뉴스 그룹 텍스트 |  |
-| fetch_olivetti_faces | 얼굴 이미지 |  |
-| fetch_lfw_people | 유명인 얼굴 |  |
-| fetch_lfw_pairs | 유명인 얼굴 |  |
-| fetch_rcv1 | 로이터 뉴스 말뭉치 |  |
-| fetch_kddcup99 | Kddcup 99 Tcp dump |  |
-| make_regression | 회귀분석용 | 가상 데이터 |
-| make_classification | 분류용 |  |
-| make_blobs | 클러스터링용 |  |
+- 내장 데이터 셋
+
+    | 데이터 로드 함수 | 데이터 | 참고 |
+    |------|------|------|
+    | load_boston | 보스턴 집값 | 내장 데이터  |
+    | load_diabetes | 당뇨병 |  |
+    | load_linnerud | linnerud |  |
+    | load_iris | 붓꽃 |  |
+    | load_digits | 필기 숫자(digit) 이미지 |  |
+    | load_wine | 포도주(wine) 등급 |  |
+    | load_breast_cancer | 유방암 진단 |  |
+    | fetch_california_housing | 캘리포니아 집값 | 인터넷 다운로드 |
+    | fetch_covtype | 토지조사 |  |
+    | fetch_20newsgroups | 뉴스 그룹 텍스트 |  |
+    | fetch_olivetti_faces | 얼굴 이미지 |  |
+    | fetch_lfw_people | 유명인 얼굴 |  |
+    | fetch_lfw_pairs | 유명인 얼굴 |  |
+    | fetch_rcv1 | 로이터 뉴스 말뭉치 |  |
+    | fetch_kddcup99 | Kddcup 99 Tcp dump |  |
+    | make_regression | 회귀분석용 | 가상 데이터 |
+    | make_classification | 분류용 |  |
+    | make_blobs | 클러스터링용 |  |
+
+- 내장 데이터 형식
+
+    | 이름 | 설명 |
+    |------|------|
+    | DESCR | 자료에 대한 설명 |
+    | data | 설명 변수 |
+    | target | 반응 변수 |
+    | feature_names | 설명 변수 이름 리스트 |
+    | target_names | 반응 변수 이름 리스트 |
 
 </details>
 
-<details><summary><h3>sklearn.datasets 내장 데이터 형식</h3></summary>
-
-| 이름 | 설명 |
-|------|------|
-| DESCR | 자료에 대한 설명 |
-| data | 설명 변수 |
-| target | 반응 변수 |
-| feature_names | 설명 변수 이름 리스트 |
-| target_names | 반응 변수 이름 리스트 |
-
-</details>
-
-<details><summary><h3>[권장 사항](https://scikit-learn.org/stable/modules/classes.html)</h3></summary>
+<details><summary><h3>권장 사항</h3></summary>
 
 ![이미지](https://scikit-learn.org/stable/_static/ml_map.png)
 
