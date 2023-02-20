@@ -4,19 +4,19 @@
 
 ## INDEX
 
-- [**What? Machine Learning**]
+- [**What? Machine Learning**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/ML.md)
 
-- [**What? SkLearn**]
+- [**What? SkLearn**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/SKLEARN.md)
 
-- [**Classification**]
+- [**Classification**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/classification)
 
-- [**Regression**]
+- [**Regression**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/regression)
 
-- [**Ensemble**]
+- [**Ensemble**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/ensemble)
 
-- [**K-MEANs**]
+- [**K-MEANs**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/k-means)
 
-- [**PCA**]
+- [**PCA**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/pca)
 
 ---
 
