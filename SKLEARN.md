@@ -1,4 +1,4 @@
-# [사이킷런](https://scikit-learn.org/stable/#)  
+# [Scikit-Learn Library](https://scikit-learn.org/stable/#)  
 
 ---
 
@@ -7,25 +7,32 @@
 ### 정의
 
 - 머신러닝 기술을 통일된 인터페이스로써 활용할 수 있도록 정리한 라이브러리  
+
 - 머신러닝 알고리즘, 머신러닝 개발을 위한 프레임워크 및 API 제공  
 
 ### API 사용 방법
 
 - 적절한 estimator 클래스를 임포트
+
 - 클래스의 하이퍼파라미터를 적절한 값으로 설정하여 인스턴스 생성
+
 - 데이터를 피쳐(속성)와 타깃(정답)으로 배치
     - 행(row) : 자료, 인스턴스, 튜플 등  
     - 열(column) : 속성, 피쳐, 필드, 어트리뷰트 등
+
 - 인스턴스의 메소드 `fit()`을 통해 인스턴스를 학습용 데이터로 훈련시킴
+
 - 인스턴스의 메소드 `predict()`을 통해 훈련된 인스턴스에 테스트용 데이터를 적용함
 
 ### [권장 사항](https://scikit-learn.org/stable/modules/classes.html)
 
-    ![이미지](https://scikit-learn.org/stable/_static/ml_map.png)
+![이미지](https://scikit-learn.org/stable/_static/ml_map.png)
 
 ---
 
 ## 주요 모듈
+
+<details><summary><h3>주요 모듈</h3></summary>
 
 | 모듈 | 설명 | 예시 |
 |------|------|------|
@@ -45,22 +52,9 @@
 | sklearn.metrics | 성능 측정 방법 제공 | Accuracy, Precision, Recall, ROC-AUC, RMSE 등 |
 | sklearn.datasets | 내장 예제 세트 제공 |
 
----
+</details>
 
-## sklearn.datasets
-
-### 데이터 형식
-
-| 이름 | 설명 |
-|------|------|
-| DESCR | 자료에 대한 설명 |
-| data | 설명 변수 |
-| target | 반응 변수 |
-| feature_names | 설명 변수 이름 리스트 |
-| target_names | 반응 변수 이름 리스트 |
-
-
-### 내장 데이터 셋
+<details><summary><h3>sklearn.datasets 내장 데이터 셋</h3></summary>
 
 | 데이터 로드 함수 | 데이터 | 참고 |
 |------|------|------|
@@ -82,3 +76,17 @@
 | make_regression | 회귀분석용 | 가상 데이터 |
 | make_classification | 분류용 |  |
 | make_blobs | 클러스터링용 |  |
+
+</details>
+
+<details><summary><h3>sklearn.datasets 내장 데이터 형식</h3></summary>
+
+| 이름 | 설명 |
+|------|------|
+| DESCR | 자료에 대한 설명 |
+| data | 설명 변수 |
+| target | 반응 변수 |
+| feature_names | 설명 변수 이름 리스트 |
+| target_names | 반응 변수 이름 리스트 |
+
+</details>
