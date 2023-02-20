@@ -1,8 +1,8 @@
-# Machine Learning
+<h1 align = "center"> 👨‍🔧 Machine Learning 👩‍🔧 </h1>
 
 ---
 
-## INDEX
+## 📜 INDEX
 
 - [**What? Machine Learning**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/ML.md)
 
