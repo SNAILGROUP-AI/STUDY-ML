@@ -1,14 +1,9 @@
 # Machine Learning
 
----
-
 ## 기계학습이란 무엇인가
 
 ### 정의
-- 컴퓨터 프로그램이 데이터와 데이터 처리 경험을 통해 학습함으로써 정보 처리 능력을 향상시키는 행위
-    > 기계학습이란 명시적인 프로그래밍 없이 컴퓨터가 학습하는 능력을 갖추게 하는 연구 분야이다. (Arthur Samuel)
-
-    > 어떤 작업 T에 대한 컴퓨터 프로그램의 성능 P가 경험 E로 인해 향상되었다고 가정하자. 그렇다면 이 컴퓨터 프로그램은 작업 T와 성능 P에 대하여 경험 E로 학습한 것이라 할 수 있다. (Tom Mitchell)
+- 컴퓨터 프로그램이 주어진 데이터를 통해 데이터 처리 경험을 훈련함으로써 정보 처리 능력을 향상시키는 행위
 
 ### 목적
 - 가지고 있는 데이터 X를 학습하여 생성한 함수에 넣으면, 그 결과로 어떠한 문제에 대한 예측치 Y를 반환함
@@ -31,15 +26,25 @@
 - 알고리즘은 모델을 사용하여 새로운 설명변수에 대하여 예측을 수행함
 - 예시
 
-| 종류 | 예시 |
-|---|---|
-| 분류분석 | 결정트리(Decision Tree) |
-| | 서포트 벡터 머신(Support Vector Machine) |
-| | k-최근접이웃(K-Nearest Neightbor: KNN) |
-| | 로지스틱 회귀(Logistic Regression) |
-| 회귀분석 | 결정트리(Decision Tree) |
-| | 선형 회귀(Linear Regression) |
-| | 확률적 경사 하강 회귀(Stochastic gradient descent Regression; SGD)|
+| 학습방식 | 분석 종류 | 예시 |
+|---|---|---|
+| 지도학습 | 분류분석 | 결정트리(Decision Tree) |
+| | | 서포트 벡터 머신(Support Vector Machine) |
+| | | k-최근접이웃(K-Nearest Neightbor: KNN) |
+| | | 로지스틱 회귀(Logistic Regression) |
+| | 회귀분석 | 결정트리(Decision Tree) |
+| | | 선형 회귀(Linear Regression) |
+| | | 확률적 경사 하강 회귀(Stochastic gradient descent Regression; SGD) |
+| 비지도학습 | 군집분석 | K-Means |
+| | | 계층적 군집 분석(Hierarchical Cluster Analysis; HCA) |
+| | | DBSCAN | 
+| | 시각화와 차원 축소 | 주성분 분석(Principal Component Analysis; PCA) |
+| | | 커널 주성분 분석(Kernel Principal Component Analysis) |
+| | | 지역적 선형 임베딩(Locally-Linear Embedding; LLE) |
+| | | t-SNE(t-distributed Stochastic Neighbor Embedding) |
+| | 이상치 탐지 | 가우스 분포 |
+| | 연관규칙 | Apriori |
+| | | Eclat |
 
 
 #### 비지도학습(Unsupervised Learning)
@@ -47,19 +52,6 @@
 - 학습 시 설명변수에 대한 반응변수를 제시하지 않음
 - 알고리즘은 설명변수의 특징만을 활용하여 목표한 결과를 산출함
 - 예시
-
-| 종류 | 예시 |
-|---|---|
-| 군집분석 | K-Means |
-| | 계층적 군집 분석(Hierarchical Cluster Analysis; HCA) |
-| | DBSCAN | 
-| 시각화와 차원 축소 | 주성분 분석(Principal Component Analysis; PCA) |
-| | 커널 주성분 분석(Kernel Principal Component Analysis) |
-| | 지역적 선형 임베딩(Locally-Linear Embedding; LLE) |
-| | t-SNE(t-distributed Stochastic Neighbor Embedding) |
-| 이상치 탐지 | 가우스 분포 |
-| 연관규칙 | Apriori |
-| | Eclat |
 
 #### 준지도학습 (Semi-supervised Learning)
 
