@@ -18,6 +18,8 @@
 
 - [**PCA**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/pca)
 
+</br>
+
 ---
 
 ## 👭 STUDY MATE
@@ -28,18 +30,14 @@
 
 👨 [**wassaa-1**](https://github.com/wassaa-1)
 
+</br>
+
 ---
 
 ## 🛠 SKILL USED
 
-### 👉 LANGUAGE
+<img alt="Python" src="https://img.shields.io/badge/python%20-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white"/> &nbsp;
 
-<img alt="Python" src="https://img.shields.io/badge/python%20-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white"/>
-
-### 👉 IDE
-
-<img src="https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=Google Colab&logoColor=white"/>
-
-### 👉 MAIN LIBRARY
+<img alt="jupyternotebook" src="https://img.shields.io/badge/Jupyter%20Notebook-F37626?style=for-the-badge&logo=Jupyter&logoColor=white"/> &nbsp;
 
 <img src="https://img.shields.io/badge/scikitlearn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
