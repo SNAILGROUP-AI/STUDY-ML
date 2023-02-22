@@ -122,7 +122,7 @@
     - 주요 알고리즘
 
         | 분석 종류 | 알고리즘 |
-        |---|---|---|
+        |---|---|
         | 군집분석 | K-Means |
         | | 계층적 군집 분석(Hierarchical Cluster Analysis; HCA) |
         | | DBSCAN | 
