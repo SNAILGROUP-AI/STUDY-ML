@@ -2,18 +2,22 @@
 
 ---
 
-<details><summary><h2>정의</h2></summary>
+## 정의
 
-### 정의
-- 컴퓨터 프로그램이 주어진 데이터를 통해 데이터 처리 경험을 훈련함으로써 정보 처리 능력을 향상시키는 행위
+<details><summary><h3>정의</h3></summary>
 
-- 설명변수 X와 반응변수 Y에 대하여, 두 변수 간 상관관계를 서술한 수식을 찾는 능력을 향상시키는 행위
+- 정의
+    - 컴퓨터 프로그램이 주어진 데이터를 통해 데이터 처리 경험을 훈련함으로써 정보 처리 능력을 향상시키는 행위
+    - 설명변수 X와 반응변수 Y에 대하여, 두 변수 간 상관관계를 서술한 수식을 찾는 능력을 향상시키는 행위
 
 - 알고리즘과 모델
     - 알고리즘 : 어떠한 문제를 해결하기 위한 일련의 절차나 방법
     - 모델 : 상관관계를 식으로 표현한 것으로서 알고리즘을 통해 도출된 설명변수와 반응변수의 관계를 나타낸 함수
 
-### 장점
+</details>
+
+<details><summary><h3>장점</h3></summary>
+
 - 전통적인 방식으로는 해결할 수 없는 복잡한 문제를 쉽게 풀 수 있음
     - 전통적인 방식의 경우 개발자가 직접 규칙을 설계하고 파라미터를 조정해야 함
     - 새로이 등장하는 문제들을 전통적인 방식으로 푸는 경우 설계할 규칙이나 조정할 파라미터가 복잡하고 다양함
@@ -24,15 +28,15 @@
     - 대용량 데이터로부터 스스로 규칙을 찾아내어 복잡한 문제에 대응함
     - 따라서 학습되지 않은 데이터에 대해서도 적용할 수 있음
 
-### 구분
+</details>
+
+<details><summary><h3>구분</h3></summary>
 
 ![머신러닝 구분](https://github.com/trekhleb/homemade-machine-learning/blob/master/images/machine-learning-map.png?raw=true)
 
 </details>
 
----
-
-<details><summary><h2>WorkFlow</h2></summary>
+<details><summary><h3>WorkFlow</h3></summary>
 
 ![머신러닝워크플로우](https://content.altexsoft.com/media/2017/04/Screenshot_3.png)
 
