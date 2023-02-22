@@ -2,7 +2,7 @@
 
 ---
 
-## 정의
+## 머신러닝이란 무엇인가
 
 <details><summary><h3>정의</h3></summary>
 
@@ -94,7 +94,7 @@
 
 ---
 
-## 분류
+## 머신러닝의 분류
 
 <details><summary><h3>사람의 감독 하에 훈련하는가</h3></summary>
 
@@ -226,7 +226,7 @@
     | sklearn.decomposition | 차원 축소 알고리즘 제공 | PCA, NMF, Truncated SVD 등 |
     | sklearn.ensemble | 앙상블 알고리즘 제공 | Random Forest, AdaBoost, GradientBoost 등 |
 
-- **전처리 및 성능 평가 지표**
+- **전처리**
     
     | 모듈 | 설명 | 예시 |
     |------|------|------|
@@ -234,8 +234,13 @@
     | sklearn.feature_selection | 특성(feature)를 선택할 수 있는 기능 제공 | 
     | sklearn.feature_extraction | 특성(feature)을 추출할 수 있는 기능 제공 |
     | sklearn.pipeline | 특성 처리, 학습, 예측을 묶어서 실행할 수 있는 기능 제공 |
+
+- **검증 및 성능 평가 지표**
+
+    | 모듈 | 설명 | 예시 |
+    |------|------|------|
     | sklearn.model_selection | 교차 검증, 최적 하이퍼파라미터 추출 API 제공 | GridSearch 등 |
-    | sklearn.metrics | 성능 측정 지표 제공 | Accuracy, Precision, Recall, ROC-AUC, RMSE 등 |
+    | sklearn.metrics | 성능 평가 지표 제공 | Accuracy, Precision, Recall, ROC-AUC, RMSE 등 |
 
 </details>
 
