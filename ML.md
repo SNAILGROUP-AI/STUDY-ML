@@ -12,20 +12,6 @@
 
 </details>
 
-<details><summary><h3>장점</h3></summary>
-
-- **전통적인 방식으로는 해결할 수 없는 복잡한 문제를 쉽게 풀 수 있음**
-    - 전통적인 방식의 경우 개발자가 직접 규칙을 설계하고 파라미터를 조정해야 함
-    - 새로이 등장하는 문제들을 전통적인 방식으로 푸는 경우 설계할 규칙이나 조정할 파라미터가 복잡하고 다양함
-    - 머신러닝의 경우 개발자가 적절한 알고리즘을 채택하고 적절한 파라미터를 설정하면 모델이 스스로 규칙을 찾아냄
-    - 따라서 전통적인 방식에 비해 머신러닝으로 문제를 풀 경우 개발자가 직접 수행해야 하는 업무가 줄어듦
-
-- **유동적인 환경에 대처할 수 있음**
-    - 대용량 데이터로부터 스스로 규칙을 찾아내어 복잡한 문제에 대응함
-    - 따라서 학습되지 않은 데이터에 대해서도 적용할 수 있음
-
-</details>
-
 <details><summary><h3>WorkFlow</h3></summary>
 
 ![머신러닝워크플로우](https://content.altexsoft.com/media/2017/04/Screenshot_3.png)
@@ -48,9 +34,17 @@
 
 </details>
 
-<details><summary><h3>구분</h3></summary>
+<details><summary><h3>장점</h3></summary>
 
-![머신러닝 구분](https://github.com/trekhleb/homemade-machine-learning/blob/master/images/machine-learning-map.png?raw=true)
+- **전통적인 방식으로는 해결할 수 없는 복잡한 문제를 쉽게 풀 수 있음**
+    - 전통적인 방식의 경우 개발자가 직접 규칙을 설계하고 파라미터를 조정해야 함
+    - 새로이 등장하는 문제들을 전통적인 방식으로 푸는 경우 설계할 규칙이나 조정할 파라미터가 복잡하고 다양함
+    - 머신러닝의 경우 개발자가 적절한 알고리즘을 채택하고 적절한 파라미터를 설정하면 모델이 스스로 규칙을 찾아냄
+    - 따라서 전통적인 방식에 비해 머신러닝으로 문제를 풀 경우 개발자가 직접 수행해야 하는 업무가 줄어듦
+
+- **유동적인 환경에 대처할 수 있음**
+    - 대용량 데이터로부터 스스로 규칙을 찾아내어 복잡한 문제에 대응함
+    - 따라서 학습되지 않은 데이터에 대해서도 적용할 수 있음
 
 </details>
 
@@ -74,15 +68,15 @@
 <details><summary><h3>다른 분야와의 관계</h3></summary>
 
 - **AI, ML, DL**
-    - 인공지능(Artificial Intelligence; AI) : 사람처럼 학습하고 추론할 수 있는 시스템을 만드는 기술
-    - 머신러닝(Machine Learning; ML) : 규칙을 프로그래밍하지 않아도 주어진 데이터에서 자동으로 규칙을 발견하는 기술
-    - 딥러닝(Deep Learning; DL) : 인공 신경망을 기반으로 하는 머신러닝 기술
+    - **인공지능(Artificial Intelligence; AI)** : 사람처럼 학습하고 추론할 수 있는 시스템을 만드는 기술
+    - **머신러닝(Machine Learning; ML)** : 규칙을 프로그래밍하지 않아도 주어진 데이터에서 자동으로 규칙을 발견하는 기술
+    - **딥러닝(Deep Learning; DL)** : 인공 신경망을 기반으로 하는 머신러닝 기술
 
-- **빅데이터와 머신러닝의 관계**
+- **빅데이터**
     - 개념
-        - 빅데이터(big data) : 기존의 데이터베이스로는 수집, 처리, 저장, 분석을 수행하기 어려울 만큼 방대한 양의 데이터
-        - 빅데이터 시스템(big data system) : 빅데이터를 다루기 위한 시스템
-        - 빅데이터 엔지니어링(big data engineering) :빅데이터를 다루는 방법
+        - **빅데이터(big data)** : 기존의 데이터베이스로는 수집, 처리, 저장, 분석을 수행하기 어려울 만큼 방대한 양의 데이터
+        - **빅데이터 시스템(big data system)** : 빅데이터를 다루기 위한 시스템
+        - **빅데이터 엔지니어링(big data engineering)** : 빅데이터를 다루는 방법
     
     - 빅데이터와 머신러닝의 관계
         - 본래 빅데이터의 개념은 데이터베이스에서 기원하여 머신러닝과는 별개로 발전해왔음
@@ -93,6 +87,12 @@
 ---
 
 ## 머신러닝의 분류
+
+<details><summary><h3>구분</h3></summary>
+
+![머신러닝 구분](https://github.com/trekhleb/homemade-machine-learning/blob/master/images/machine-learning-map.png?raw=true)
+
+</details>
 
 <details><summary><h3>사람의 감독 하에 훈련하는가</h3></summary>
 
@@ -114,7 +114,7 @@
         | | 확률적 경사 하강 회귀(Stochastic gradient descent Regression; SGD) |
 
 - **비지도 학습(Unsupervised Learning)**
-    - 훈련 단계에서 설명변수에 조합에 대응하는  반응변수를 제시하지 않는 학습 방법
+    - 훈련 단계에서 설명변수에 조합에 대응하는 반응변수를 제시하지 않는 학습 방법
         - 알고리즘은 설명변수의 특징만을 활용하여 목표한 결과를 산출함
 
     - 주요 알고리즘
@@ -148,9 +148,8 @@
     ![강화학습](https://tensorflowkorea.files.wordpress.com/2018/05/e18489e185b3e1848fe185b3e18485e185b5e186abe18489e185a3e186ba-2018-05-24-e1848be185a9e1848ce185a5e186ab-12-21-44.png?w=768)
 
     - 행동심리학에서 영감을 받은 학습 방법
-    
-    - 보상을 얻기 위한 전략(policy)을 스스로 학습함
         - 행동에 대한 구체적인 지시 없이 목표만 부여함
+        - 보상을 얻기 위한 전략(policy)을 스스로 학습함
         - 환경(environment)을 관찰하고 행동(action)을 실행하여 보상(reward)을 도출함
 
     - 주요 알고리즘
