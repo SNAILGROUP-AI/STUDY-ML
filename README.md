@@ -14,13 +14,13 @@
 
 ### supervised
 
-- [**Preprocessing**]()
+- [**Preprocessing**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/preprocessing.md)
 
 - [**Classification**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/classification)
 
 - [**Regression**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/regression)
 
-- [**TroubleShooting**]()
+- [**TroubleShooting**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/troubleshooting.md)
 
 - [**Ensemble**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/ensemble)
 
