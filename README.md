@@ -12,9 +12,9 @@
 
 - [**What? Machine Learning**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/ML.md)
 
-### supervised
-
 - [**Preprocessing**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/preprocessing.md)
+
+### supervised
 
 - [**Classification**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/classification)
 
