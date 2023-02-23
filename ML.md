@@ -1,7 +1,3 @@
-# What? Machine Learning
-
----
-
 ## 머신러닝이란 무엇인가
 
 <details><summary><h3>정의</h3></summary>
