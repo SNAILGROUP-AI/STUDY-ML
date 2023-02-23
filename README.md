@@ -10,8 +10,6 @@
 
 - [**What? Machine Learning**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/ML.md)
 
-- [**What? SkLearn**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/SKLEARN.md)
-
 - [**Classification**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/classification)
 
 - [**Regression**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/regression)
