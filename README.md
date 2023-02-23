@@ -8,13 +8,23 @@
 
 ## 📜 INDEX
 
+### info
+
 - [**What? Machine Learning**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/ML.md)
+
+### supervised
+
+- [**Preprocessing**]()
 
 - [**Classification**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/classification)
 
 - [**Regression**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/regression)
 
+- [**TroubleShooting**]()
+
 - [**Ensemble**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/ensemble)
+
+### unsupervised
 
 - [**K-MEANs**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/k-means)
 
