@@ -38,9 +38,27 @@
 
 👨 [**jayarnim**](https://github.com/jayarnim)
 
+```
+- Regression
+- K-MEANs
+- PCA
+```
+
 👩 [**410am**](https://github.com/410am)
 
+```
+- Ensemble
+- K-MEANs
+- PCA
+```
+
 👨 [**wassaa-1**](https://github.com/wassaa-1)
+
+```
+- Classification
+- K-MEANs
+- PCA
+```
 
 </br>
 
