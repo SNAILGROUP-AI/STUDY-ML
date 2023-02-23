@@ -1,4 +1,4 @@
-## 머신러닝이란 무엇인가
+## 👨‍🔧 머신러닝이란 무엇인가
 
 <details><summary><h3>정의</h3></summary>
 
@@ -86,7 +86,7 @@
 
 ---
 
-## 머신러닝의 분류
+## 📚 머신러닝의 분류
 
 <details><summary><h3>구분</h3></summary>
 
@@ -207,7 +207,7 @@
 
 ---
 
-## [Scikit-Learn Library](https://scikit-learn.org/stable/#)
+## 🛠 [Scikit-Learn Library](https://scikit-learn.org/stable/#)
 
 <details><summary><h3>정의</h3></summary>
 
