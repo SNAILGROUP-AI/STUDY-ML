@@ -10,25 +10,25 @@
 
 ### info
 
-- [**What? Machine Learning**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/ML.md)
+- [**What? Machine Learning**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/0.ML.md)
 
 ### supervised
 
-- [**Preprocessing**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/preprocessing.md)
+- [**Preprocessing**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/1.preprocessing.md)
 
-- [**Classification**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/classification)
+- [**Classification**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/2.classification.md)
 
-- [**Regression**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/regression)
+- [**Regression**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/3.regression.md)
 
-- [**TroubleShooting**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/troubleshooting.md)
+- [**TroubleShooting**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/4.troubleshooting.md)
 
-- [**Ensemble**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/ensemble)
+- [**Ensemble**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/5.ensemble.md)
 
 ### unsupervised
 
-- [**K-MEANs**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/k-means)
+- [**K-MEANs**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/6.k-means.md)
 
-- [**PCA**](https://github.com/SNAILGROUP-AI/STUDY-ML/tree/main/pca)
+- [**PCA**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/7.pca.md)
 
 </br>
 
