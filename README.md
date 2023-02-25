@@ -20,15 +20,17 @@
 
 - [**Regression**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/3.regression.md)
 
-- [**TroubleShooting**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/4.troubleshooting.md)
+- [**Score**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/4.score.md)
 
-- [**Ensemble**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/5.ensemble.md)
+- [**TroubleShooting**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/5.troubleshooting.md)
+
+- [**Ensemble**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/6.ensemble.md)
 
 ### unsupervised
 
-- [**K-MEANs**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/6.k-means.md)
+- [**Cluster**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/7.cluster.md)
 
-- [**PCA**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/7.pca.md)
+- [**PCA**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/8.pca.md)
 
 </br>
 
