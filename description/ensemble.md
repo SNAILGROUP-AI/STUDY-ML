@@ -61,6 +61,7 @@
 
 - **주요 하이퍼파라미터**
     - `estimators` : 동원할 알고리즘 인스턴스 리스트
+    
     - `voting = hard` : 설계 방식
         - `hard` : hard voting
         - `soft` : soft voting
@@ -73,6 +74,16 @@
 
 <details><summary><h3>Random Forest</h3></summary>
 
+- **정의**
+
+- **사용 방법**
+
+    ```
+
+    ```
+
+- **주요 하이퍼파라미터**
+
 </details>
 
 ---
@@ -81,12 +92,124 @@
 
 <details><summary><h3>Gradient Boosting Machine(GBM)</h3></summary>
 
+- **정의**
+
+- **사용 방법**
+
+    ```
+    from sklearn.ensemble import GradientBoostingClassifier
+    from sklearn.metrics import accuracy_score
+    
+    # GBM 알고리즘 인스턴스 생성
+    gb_clf = GradientBoostingClassifier(
+        random_state = 121, 
+        learning_rate = 0.1, 
+        n_estimators = 100)
+
+    # 훈련용 데이터 세트를 통해 인스턴스를 훈련시켜서 모델 설계
+    gb_clf.fit(X_train, y_train)
+    
+    # 평가용 데이터 세트를 통해 예측
+    y_predict = gb_clf.predict(X_test)
+    
+    # 대표적인 성능 평가 지표인 결정계수를 통해 성능 평가
+    socre = accuracy_score(y_test, y_predict)
+    print(score)
+    ```
+
+- **주요 하이퍼파라미터**
+
 </details>
 
 <details><summary><h3>eXtra Gradient Boosting(XGBoost)</h3></summary>
 
+- **정의**
+    - 병렬 처리가 불가능하여 속도가 느리고 과적합이 발생할 우려가 있는 GBM 알고리즘을 보완함
+    - 내장된 교차검증 절차를 통해 예측 성능이 향상되지 않을 경우 Early Stopping할 수 있음
+
+- **사용 방법**
+
+    ```
+    from xgboost import XGBClassifier
+    from sklearn.metrics import accuracy_score
+    
+    # XGB 알고리즘 인스턴스 생성
+    xgb_clf = XGBClassifier(
+        random_state = 121, 
+        n_estimators = 100, 
+        learning_rate = 0.1
+        )
+    
+    # 교차검증 시 사용할 데이터 세트 구성
+    evals = [(X_val, y_val)]
+
+    # 훈련용 데이터 세트를 통해 인스턴스를 훈련시켜서 모델 설계
+    # 검증용 데이터 세트를 통해 교차검증
+    # 훈련 최대 횟수를 400회로 제한
+    xgb_clf.fit(
+        X_train, y_train,
+        early_stopping_rounds = 400, 
+        eval_set = evals,
+        eval_metric = 'logloss'
+        )
+
+    # 평가용 데이터 세트를 통해 예측
+    y_predict = xgb_clf.predict(X_test)
+    
+    # 대표적인 성능 평가 지표인 결정계수를 통해 성능 평가
+    socre = accuracy_score(y_test, y_predict)
+    print(score)
+    ```
+
+- **주요 하이퍼파라미터**
+    - `random_state = None`
+
+    - `n_estimators = 100` : 동원할 모델의 개수
+    
+    - `learning_rate = 0.1` : 학습률
+    
+    - `early_stopping_rounds` : 학습이 장기화될 경우 조기 종료하기 위하여 최대 학습 횟수 설정
+    
+    - `eval_set` : 성능 교차검증에 사용할 데이터 세트
+        - 데이터 세트 분할 시 우선 훈련용과 평가용으로 분할함
+        - 이후 훈련용 데이터 세트를 훈련용과 검증용으로 재분할함
+    
+    - `eval_metric` : 교차검증 시 사용할 평가 지표
+        - `logloss` : 이항분류분석 교차검증 시 평가 지표
+        - `multi-logloss` : 다항분류분석 교차검증 시 평가 지표
+
+- **다음을 통해 학습된 모델이 계산한 설명변수별 가중치를 확인할 수 있음**
+
+    ```
+    from xgboost import plot_importance
+    print(plot_importance(xgb_clf))
+    ```
+
 </details>
 
 <details><summary><h3>Light Gradient Boosting Machine(LightGBM)</h3></summary>
+
+- **정의**
+
+- **사용 방법**
+
+    ```
+    from sklearn.ensemble import GradientBoostingClassifier
+    from sklearn.metrics import accuracy_score
+    
+    gb_clf = GradientBoostingClassifier(
+        random_state = 121, 
+        learning_rate = 0.1, 
+        n_estimators = 100)
+
+    gb_clf.fit(X_train, y_train)
+    
+    y_predict = gb_clf.predict(X_test)
+    
+    socre = accuracy_score(y_test, y_predict)
+    print(score)
+    ```
+
+- **주요 하이퍼파라미터**
 
 </details>
