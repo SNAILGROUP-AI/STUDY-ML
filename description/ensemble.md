@@ -101,10 +101,7 @@
     from sklearn.metrics import accuracy_score
     
     # GBM 알고리즘 인스턴스 생성
-    gb_clf = GradientBoostingClassifier(
-        random_state = 121, 
-        learning_rate = 0.1, 
-        n_estimators = 100)
+    gb_clf = GradientBoostingClassifier()
 
     # 훈련용 데이터 세트를 통해 인스턴스를 훈련시켜서 모델 설계
     gb_clf.fit(X_train, y_train)
@@ -134,21 +131,15 @@
     from sklearn.metrics import accuracy_score
     
     # XGB 알고리즘 인스턴스 생성
-    xgb_clf = XGBClassifier(
-        random_state = 121, 
-        n_estimators = 100, 
-        learning_rate = 0.1
-        )
+    xgb_clf = XGBClassifier()
     
     # 교차검증 시 사용할 데이터 세트 구성
     evals = [(X_val, y_val)]
 
     # 훈련용 데이터 세트를 통해 인스턴스를 훈련시켜서 모델 설계
     # 검증용 데이터 세트를 통해 교차검증
-    # 훈련 최대 횟수를 400회로 제한
     xgb_clf.fit(
         X_train, y_train,
-        early_stopping_rounds = 400, 
         eval_set = evals,
         eval_metric = 'logloss'
         )
@@ -162,21 +153,24 @@
     ```
 
 - **주요 하이퍼파라미터**
-    - `random_state = None`
+    - **인스턴스 생성 시 설정**
+        - `random_state = None`
+        - `n_estimators = 100` : 동원할 모델의 개수
+        - `learning_rate = 0.1` : 학습률
+        - `max_depth = -1` : 트리 최대 깊이
+        - `num_leaves = 31` : 하나의 트리가 최대로 가질 수 있는 leaf_node의 개수
+        - `min_child_samples = 20` : leaf_node가 되기 위해 필요한 최소한의 샘플 개수
 
-    - `n_estimators = 100` : 동원할 모델의 개수
-    
-    - `learning_rate = 0.1` : 학습률
-    
-    - `early_stopping_rounds` : 학습이 장기화될 경우 조기 종료하기 위하여 최대 학습 횟수 설정
-    
-    - `eval_set` : 성능 교차검증에 사용할 데이터 세트
-        - 데이터 세트 분할 시 우선 훈련용과 평가용으로 분할함
-        - 이후 훈련용 데이터 세트를 훈련용과 검증용으로 재분할함
-    
-    - `eval_metric` : 교차검증 시 사용할 평가 지표
-        - `logloss` : 이항분류분석 교차검증 시 평가 지표
-        - `multi-logloss` : 다항분류분석 교차검증 시 평가 지표
+    - **훈련 시 설정**
+        - `early_stopping_rounds = None` : 학습이 장기화될 경우 조기 종료하기 위한 조건으로서 최대 학습 횟수
+        
+        - `eval_set` : 성능 교차검증에 사용할 데이터 세트
+            - 데이터 세트 분할 시 우선 훈련용과 평가용으로 분할함
+            - 이후 훈련용 데이터 세트를 훈련용과 검증용으로 재분할함
+        
+        - `eval_metric` : 교차검증 시 사용할 평가 지표
+            - `logloss` : 이항분류분석 교차검증 시 평가 지표
+            - `multi-logloss` : 다항분류분석 교차검증 시 평가 지표
 
 - **다음을 통해 학습된 모델이 계산한 설명변수별 가중치를 확인할 수 있음**
 

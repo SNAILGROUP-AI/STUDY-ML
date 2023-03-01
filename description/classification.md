@@ -99,7 +99,7 @@
         - `gini` : 지니 불순도
         - `entropy` : 엔트로피 불순도
     
-    - `max_nodes = None` : 트리 최대 깊이
+    - `max_depth = -1` : 트리 최대 깊이
     
     - `max_features = None` : decision node에서 최적 분할을 위해 고려되어야 할 설명변수의 최대 개수
     
