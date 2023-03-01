@@ -18,9 +18,9 @@
 
 - [**Classification**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/classification.md)
 
-- [**Regression**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/regression.md)
-
 - [**Ensemble**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/ensemble.md)
+
+- [**Regression**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/regression.md)
 
 - [**Score**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/score.md)
 
