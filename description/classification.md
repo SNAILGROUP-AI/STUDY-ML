@@ -11,8 +11,8 @@
     - 이상적인 분류기는 새로운 데이터의 정체를 잘 규명할 수 있음
 
 - **구분**
-    - **이항분류분석(binary classification)** : 대상을 둘 중 하나로 분류하는 분석 방법
-    - **다항분류분석(multi-category classificaiton)** : 대상을 3개 이상의 범주 중 하나로 분류하는 분석 방법
+    - **이항분류분석(Binary Classification Analysis)** : 대상을 둘 중 하나로 분류하는 분석 방법
+    - **다항분류분석(Multi-category Classificaiton Analysis)** : 대상을 3개 이상의 범주 중 하나로 분류하는 분석 방법
 
 ---
 
