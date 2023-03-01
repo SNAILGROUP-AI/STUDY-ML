@@ -22,11 +22,48 @@
 
 ## ✅ Voting
 
-<details><summary><h3>Hard Voting</h3></summary>
+<details><summary><h3>Example</h3></summary>
 
-</details>
+- **사용 방법**
 
-<details><summary><h3>Soft Voting</h3></summary>
+    ```
+    from sklearn.tree import DecisionTreeClassifier
+    from sklearn.neighbors import KNeighborsClassifier
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.ensemble import VotingClassifier
+    from sklearn.metrics import accuracy_score
+
+    # 결정 트리 알고리즘 인스턴스 생성
+    dt_clf = DecisionTreeClassifier()
+
+    # 최근접 이웃 알고리즘 인스턴스 생성
+    knn_clf = KNeighborsClassifier()
+
+    # 로지스틱 회귀 알고리즘 인스턴스 생성
+    lg_clf = LogisticRegression()
+
+    # soft voting을 통해 세 인스턴스를 결합하여 앙상블 알고리즘 인스턴스 생성
+    voting_clf = VotingClassifier(
+        estimators = [('DT', dt_clf), ('KNN', knn_clf), ('LG', lg_clf)],
+        voting = 'soft'
+        )
+
+    # 훈련용 데이터 세트를 통해 인스턴스를 훈련시켜서 모델 설계
+    voting_clf.fit(X_train, y_train)
+
+    # 평가용 데이터 세트를 통해 예측
+    y_predict = voting_clf.predict(X_test)
+
+    # 대표적인 성능 평가 지표인 결정계수를 통해 성능 평가
+    score = accuracy_score(y_test, y_predict)
+    print(score)
+    ```
+
+- **주요 하이퍼파라미터**
+    - `estimators` : 동원할 알고리즘 인스턴스 리스트
+    - `voting = hard` : 설계 방식
+        - `hard` : hard voting
+        - `soft` : soft voting
 
 </details>
 

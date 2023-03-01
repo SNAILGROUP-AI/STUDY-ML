@@ -242,13 +242,13 @@
     from sklearn.metrics import accuracy_score
 
     # 로지스틱 회귀 알고리즘 인스턴스 생성
-    log_reg = LogisticRegression()
+    lg_clf = LogisticRegression()
     
     # 훈련용 데이터 세트를 통해 인스턴스를 훈련시켜서 모델 설계
-    log_reg.fit(X_train, y_train)
+    lg_clf.fit(X_train, y_train)
 
     # 평가용 데이터 세트를 통해 예측
-    y_predict = log_reg.predict(X_test)
+    y_predict = lg_clf.predict(X_test)
 
     # 대표적인 성능 평가 지표인 결정계수를 통해 성능 평가
     score = accuracy_score(y_test, y_predict)
