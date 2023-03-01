@@ -1,4 +1,4 @@
-## Ensemble
+## 👨‍👩‍👦 Ensemble
 
 - **앙상블 기법이란 무엇인가**
     - 단일 모델들을 결합하는 기법
@@ -7,7 +7,7 @@
 - **앙상블 기법의 종류**
     - **Voting** : 여러 분류 모델들을 수동으로 결합하는 방식
         - **Hard Voting** : 임의의 자료에 대하여 모델들이 예측한 결과를 종합하여 다수결로 해당 자료의 범주를 선정하는 방식
-        - **Soft Voting** : 임의의 자료에 대하여 모델들이 예측한 범주별 확률의 평균을 내어 가장 높은 확률을 가지는 범주를 해당 자료의 범주로 선정하는 방식
+        - **Soft Voting** : 임의의 자료에 대하여 모델들이 예측한 범주별 확률의 평균을 낸 후 확률이 가장 높은 범주를 해당 자료의 범주로 선정하는 방식
     
     - **Bagging(Bootstrap Aggregating)** : 여러 분류 모델들을 병렬로 작업하도록 설계하는 방식
     
@@ -20,20 +20,36 @@
 
 ---
 
-## Voting
+## ✅ Voting
+
+<details><summary><h3>Hard Voting</h3></summary>
+
+</details>
+
+<details><summary><h3>Soft Voting</h3></summary>
+
+</details>
 
 ---
 
-## Bagging
+## 🤝 Bagging
 
-### Random Forest
+<details><summary><h3>Random Forest</h3></summary>
+
+</details>
 
 ---
 
-## Boosting
+## 🕵️ Boosting
 
-### Gradient Boosting Machine(GBM)
+<details><summary><h3>Gradient Boosting Machine(GBM)</h3></summary>
 
-### eXtra Gradient Boosting(XGBoost)
+</details>
 
-### Light Gradient Boosting Machine(LightGBM)
+<details><summary><h3>eXtra Gradient Boosting(XGBoost)</h3></summary>
+
+</details>
+
+<details><summary><h3>Light Gradient Boosting Machine(LightGBM)</h3></summary>
+
+</details>
