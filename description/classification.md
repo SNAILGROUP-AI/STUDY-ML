@@ -198,17 +198,17 @@
 
 <details><summary><h3>로지스틱 회귀란 무엇인가</h3></summary>
 
-- **정의 : 선형 회귀식을 활용하는 이항분류분석 알고리즘**
+- **정의 : 경사하강법에 근거하여 도출된 회귀식을 활용하는 이항분류분석 알고리즘**
 
 - **로지스틱 회귀식의 수학적 이해**
 
     ![시그모이드 함수](https://user-images.githubusercontent.com/116495744/221402155-596e45c2-5d0d-40a6-ae23-9589b48f807c.png)
 
-    - **연결함수** : 선형 회귀식의 결과값을 이항범주로 변환하는 함수
+    - **연결함수** : 회귀식의 결과값을 이항범주로 변환하는 함수
         ### $$y=f(x)=b+wX$$
         - $y$ : 이항 반응변수
         - $f(x)$ : 연결함수(Link Function)
-        - $b+wX$ : 선형 회귀식
+        - $b+wX$ : 회귀식
     
     - **승산(odds)** : 이항범주를 성패로 정의할 때, 1번 실패할 때 성공할 횟수
         ### $$odds=\frac{p}{1-p}$$
@@ -237,9 +237,47 @@
 
 - **사용 방법**
 
+    ```
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.metrics import accuracy_score
+
+    # 로지스틱 회귀 알고리즘 인스턴스 생성
+    log_reg = LogisticRegression()
+    
+    # 훈련용 데이터 세트를 통해 인스턴스를 훈련시켜서 모델 설계
+    log_reg.fit(X_train, y_train)
+
+    # 평가용 데이터 세트를 통해 예측
+    y_predict = log_reg.predict(X_test)
+
+    # 대표적인 성능 평가 지표인 결정계수를 통해 성능 평가
+    score = accuracy_score(y_test, y_predict)
+    print(score)
+    ```
+
 - **주요 하이퍼파라미터**
+    - `random_state = None`
+    
+    - `penalty = l2` : 가중치 규제 유형
+        - `l1` : L1 규제를 통해 과적합을 방지함
+            - 맨해튼 거리 측정법에 기초한 오차 계산법을 통해 가중치를 규제함
+            - 즉, 손실 함수에 가중치 절대값의 합을 더함
+            - 특정 설명변수의 가중치를 0으로 만들 수 있음
+            - feature selection
+        - `l2` : L2 규제를 통해 과적합을 방지함
+            - 유클리디안 거리 측정법에 기초한 오차 계산법을 통해 가중치를 규제함
+            - 즉, 손실 함수에 가중치 제곱의 합을 더함
+            - 이상치에 해당하는 가중치의 영향력을 최소화할 수 있음
+    
+    - `C = 1` : 가중치 규제 강도로서 손실 함수로 측정된 손실 크기
+    
+    - `max_iter = 100` : 경사 확인 횟수
 
 - **다음의 속성을 통해 훈련된 모델의 정보를 확인할 수 있음**
+    - `n_features_in_` : 설명변수의 수
+    - `feature_nmaes_in_` : 설명변수명
+    - `coef_` : 각 설명변수의 가중치
+    - `intercept_` : 편향성
 
 </details>
 

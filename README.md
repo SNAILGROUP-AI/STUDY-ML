@@ -10,21 +10,21 @@
 
 ### info
 
-- [**What? Machine Learning**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/0.ML.md)
+- [**What? Machine Learning**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/ML.md)
 
 ### supervised
 
-- [**Preprocessing**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/1.preprocessing.md)
+- [**Preprocessing**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/preprocessing.md)
 
-- [**Classification**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/2.classification.md)
+- [**Classification**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/classification.md)
 
-- [**Regression**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/3.regression.md)
+- [**Regression**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/regression.md)
 
-- [**Score**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/4.score.md)
+- [**Ensemble**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/ensemble.md)
 
-- [**TroubleShooting**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/5.troubleshooting.md)
+- [**Score**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/score.md)
 
-- [**Ensemble**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/6.ensemble.md)
+- [**TroubleShooting**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/troubleshooting.md)
 
 ### unsupervised
 
@@ -41,7 +41,7 @@
 👨 [**jayarnim**](https://github.com/jayarnim)
 
 ```
-- Regression
+- Classification
 - K-MEANs
 - PCA
 ```
@@ -57,7 +57,7 @@
 👨 [**wassaa-1**](https://github.com/wassaa-1)
 
 ```
-- Classification
+- Regression
 - K-MEANs
 - PCA
 ```
