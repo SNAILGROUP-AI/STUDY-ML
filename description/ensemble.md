@@ -98,6 +98,14 @@
     ```
 
 - **주요 하이퍼파라미터**
+    - `random_state = None`
+    - `n_estimators = 100` : 동원할 모델의 개수
+    - `max_depth = -1` : 트리 최대 깊이
+    - `min_samples_split = 2` : 하위 노드로 가지치기하기 위해 필요한 최소한의 샘플 개수
+    - `min_samples_leaf = 1` : 리프 노드가 되기 위해 필요한 최소한의 샘플 개수
+
+- **다음의 속성을 통해 훈련된 모델의 정보를 확인할 수 있음**
+    - `feature_importances_` : 설명변수별 가중치
 
 - **기타 하이퍼파라미터 및 모델 정보 목록은 `estimator_params`을 통해 확인 가능함**
 
