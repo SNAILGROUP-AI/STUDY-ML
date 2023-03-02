@@ -101,9 +101,9 @@
     
     - `max_depth = -1` : 트리 최대 깊이
     
-    - `min_samples_split = 2` : 특정 노드에서 하위 노드로 가지치기 하기 위한 최소한의 샘플 개수
+    - `min_samples_split = 2` : 하위 노드로 가지치기하기 위해 필요한 최소한의 샘플 개수
     
-    - `min_samples_leaf` : leaf node가 되기 위한 최소한의 샘플 개수
+    - `min_samples_leaf = 1` : 리프 노드가 되기 위해 필요한 최소한의 샘플 개수
 
 - **다음의 속성을 통해 훈련된 모델의 정보를 확인할 수 있음**
     - `feature_importances_` : 설명변수별 가중치
@@ -131,6 +131,8 @@
     # plot tree 출력
     plt.show()
     ```
+
+- **기타 하이퍼파라미터 및 모델 정보 목록은 `estimator_params`을 통해 확인 가능함**
 
 </details>
 
@@ -190,6 +192,8 @@
     - `weights = 'uniform'` : 가중치 부여 방법
         - `uniform` : 각 이웃에 동일한 가중치를 부여함
         - `distance` : 거리가 가까울수록 더 큰 가중치를 부여함
+
+- **기타 하이퍼파라미터 및 모델 정보 목록은 `estimator_params`을 통해 확인 가능함**
 
 </details>
 
@@ -280,6 +284,8 @@
     - `feature_nmaes_in_` : 설명변수명
     - `coef_` : 각 설명변수의 가중치
     - `intercept_` : 편향성
+
+- **기타 하이퍼파라미터 및 모델 정보 목록은 `estimator_params`을 통해 확인 가능함**
 
 </details>
 
