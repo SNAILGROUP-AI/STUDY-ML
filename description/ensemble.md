@@ -211,7 +211,7 @@
     # 대표적인 성능 평가 지표인 결정계수를 통해 성능 평가
     socre = accuracy_score(y_test, y_predict)
     print(score)
-    ``
+    ```
 
 - **주요 하이퍼파라미터**
     - **인스턴스 생성 시 설정**
