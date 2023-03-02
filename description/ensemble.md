@@ -233,4 +233,11 @@
             - `logloss` : 이항분류분석 교차검증 시 평가 지표
             - `multi-logloss` : 다항분류분석 교차검증 시 평가 지표
 
+- **다음을 통해 학습된 모델이 계산한 설명변수별 가중치를 시각화할 수 있음**
+
+    ```
+    from lightgbm import plot_importance
+    print(plot_importance(lgb_clf))
+    ```
+
 </details>
