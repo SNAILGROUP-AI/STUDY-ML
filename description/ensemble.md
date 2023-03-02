@@ -172,7 +172,7 @@
             - `logloss` : 이항분류분석 교차검증 시 평가 지표
             - `multi-logloss` : 다항분류분석 교차검증 시 평가 지표
 
-- **다음을 통해 학습된 모델이 계산한 설명변수별 가중치를 확인할 수 있음**
+- **다음을 통해 학습된 모델이 계산한 설명변수별 가중치를 시각화할 수 있음**
 
     ```
     from xgboost import plot_importance
@@ -188,22 +188,49 @@
 - **사용 방법**
 
     ```
-    from sklearn.ensemble import GradientBoostingClassifier
+    from lightgbm import LGBMClassifier
     from sklearn.metrics import accuracy_score
     
-    gb_clf = GradientBoostingClassifier(
-        random_state = 121, 
-        learning_rate = 0.1, 
-        n_estimators = 100)
+    # Light GBM 알고리즘 인스턴스 생성
+    lgb_clf = LGBMClassifier()
+    
+    # 교차검증 시 사용할 데이터 세트 구성
+    evals = [(X_val, y_val)]
 
-    gb_clf.fit(X_train, y_train)
+    # 훈련용 데이터 세트를 통해 인스턴스를 훈련시켜서 모델 설계
+    # 검증용 데이터 세트를 통해 교차검증
+    lgb_clf.fit(
+        X_train, y_train,
+        eval_set = evals,
+        eval_metric = 'logloss'
+        )
+
+    # 평가용 데이터 세트를 통해 예측
+    y_predict = lgb_clf.predict(X_test)
     
-    y_predict = gb_clf.predict(X_test)
-    
+    # 대표적인 성능 평가 지표인 결정계수를 통해 성능 평가
     socre = accuracy_score(y_test, y_predict)
     print(score)
-    ```
+    ``
 
 - **주요 하이퍼파라미터**
+    - **인스턴스 생성 시 설정**
+        - `random_state = None`
+        - `n_estimators = 100` : 동원할 모델의 개수
+        - `learning_rate = 0.1` : 학습률
+        - `max_depth = -1` : 트리 최대 깊이
+        - `num_leaves = 31` : 하나의 트리가 최대로 가질 수 있는 leaf_node의 개수
+        - `min_child_samples = 20` : leaf_node가 되기 위해 필요한 최소한의 샘플 개수
+
+    - **훈련 시 설정**
+        - `early_stopping_rounds = None` : 학습이 장기화될 경우 조기 종료하기 위한 조건으로서 최대 학습 횟수
+        
+        - `eval_set` : 성능 교차검증에 사용할 데이터 세트
+            - 데이터 세트 분할 시 우선 훈련용과 평가용으로 분할함
+            - 이후 훈련용 데이터 세트를 훈련용과 검증용으로 재분할함
+        
+        - `eval_metric` : 교차검증 시 사용할 평가 지표
+            - `logloss` : 이항분류분석 교차검증 시 평가 지표
+            - `multi-logloss` : 다항분류분석 교차검증 시 평가 지표
 
 </details>
