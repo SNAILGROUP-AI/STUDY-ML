@@ -1,32 +1,42 @@
 ## ✂︎ 데이터 셋 나누기
 
----
-
-## 🔍 설명변수 탐색
-
 <details><summary><h3>설명변수 탐색</h3></summary>
 
-- **`info()` : 컬럼별 자료형, not-null 개수 등을 반환함**
+![](https://miro.medium.com/max/1400/0*DKB-pJy7-G6gEkM-)
 
-- **`describe()` : 컬럼별 값의 특성을 요약함**
-    - `include = None` : 특성을 요약할 자료형을 특정함
-        - `None` : 수치형 컬럼 값의 특성을 요약함
-            - `count`, `mean`, `std`, 사분위수 등
-        
-        - `object` : 범주형 컬럼 값의 특성을 요약함
-            - `count`, `unique`, `top`, `freq` 등
-        
-        - 특정할 자료형이 여러 개인 경우 해당 자료형을 기입한 리스트를 값으로 할당함
-            - 가령 `['number', 'object]`를 할당하면 수치형과 범주형 값의 특성을 요약함
+**1단계 : 데이터 셋 분리**
 
-- **`value_counts()` : 컬럼별 고유값과 그 개수 혹은 비중을 요약함**
-    - `normalize = False` : 고유값 계산 방법
-        - `True` : 고유값의 비중을 계산함
-        - `False` : 고유값의 개수를 계산함
+`sklearn.model_selection`의 `train_test_split`은 클래스 이름 그대로 **학습과 검증 (혹은 테스트) 셋**을 나누어 주는 역할을 합니다. 학습 (Train) / 검증 (Validation or Test) 세트로 나누며, 검증 세트로 1) **과대 적합**여부, 2) 모델의 성능 평가를 진행할 수 있습니다.
 
-    - `dropna = False` : 결측치 포함 여부
-        - `True` : 집계 시 결측치를 포함함
-        - `False` : 집계 시 결측치를 배제함
+- 학습을 위한 다양한 피처와 분류 결정값인 레이블 데이터로 모델을 학습한 뒤, 별도의 테스트 데이터 세트에서 미지의 레이블을 예측
+→ 지도학습은 명확한 정답이 주어진 데이터를 먼저 학습한 뒤 미지의 정답을 예측하는 방식
+
+- 학습 데이터(training data) 세트
+    - 학습을 위해 주어진 데이터 세트
+    - 많을수록 유리
+
+- 테스트 데이터(test data) 세트
+    - 머신러닝 모델의 예측 성능 평가를 위해 주어진 데이터 세트
+    - 학습에 사용되지 않은 데이터이어야 함
+
+- 검증 데이터(validation data) 세트
+    - 학습 과정에서 학습을 중단할 시점을 결정하기 위해 사용하는 데이터 세트
+
+
+
+train_test_split()
+
+- iris_data: 피처 데이터 세트
+    - iris_label: 레이블 데이터 세트
+    - test_size=0.3: 전체 데이터 세트 중 테스트 데이터 세트 비율 = 30%
+    - random_state: 호출 시마다 같은 학습/테스트용 데이터 세트를 생성하기 위해 주어지는 난수 발생 값 (여기서는 값 고정을 위해 임의 숫자를 넣음)
+    - train_test_split(): 호출 시 무작위로 데이터를 분리 → random_state를 지정하지 않으면 수행할 때마다 다른 학습/테스트용 데이터가 생성됨
+
+- train_test_split() 구분
+
+| X_train |	X_test | y_train | y_test |
+|---------|--------|---------|--------|
+|학습용 피처 데이터 세트|테스트용 피처 데이터 세트|학습용 레이블 데이터 세트|테스트용 레이블 데이터 세트|
 
 </details>
 
@@ -68,10 +78,10 @@
     # 결측치가 존재할 경우 True, 존재하지 않을 경우 False를 기입한 데이터프레임 반환
     df.isnull()
 
-    # 각 컬럼별 결측치 개수 반환
+    # 데이터프레임 df의 컬럼별 결측치 개수 반환
     df.isnull().sum()
 
-    # 각 컬럼별 결측치 비율 반환
+    # 데이터프레임 df의 컬럼별 결측치 비율 반환
     df.isnull().mean()
     ```
 
@@ -80,10 +90,10 @@
     ```
     import missingno as msno
 
-    # 설명변수별 결측치 위치 시각화
+    # 데이터프레임 df의 컬럼별 결측치 위치 시각화
     msno.matrix(df = df)
     
-    # 설명변수별 결측치 비율 시각화
+    # 데이터프레임 df의 컬럼별 결측치 비율 시각화
     msno.bar(df = df)
     ```
 
@@ -98,6 +108,7 @@
     ```
 
     - `how = 'any'` : 삭제 조건 세부 설정
+        
         - `any` : 결측치가 하나라도 포함된 레코드를 제거함
         - `all` : 모든 컬럼이 결측치인 레코드만 제거함
 
@@ -164,39 +175,16 @@
 
 </details>
 
-<details><summary><h3>단위가 들쑥날쑥한 경우</h3></summary>
-
-- **정규화(Normalization)**
-    - 정의 : 값의 범위를 특정하고 모든 설명변수의 분포를 해당 범위로 확대 혹은 축소함
-    - 목적 : 모든 설명변수의 크기를 통일하여 설명변수 간 상대적 크기가 주는 영향력을 최소화함
-    - 통상적으로는 최대값을 1, 음수가 존재하면 최소값을 -1, 존재하지 않으면 최소값을 0으로 변환함
-    
-    ### $$x_{new}=\frac{x_i-min(x)}{max(x)-min(x)}$$
-
-- **사용 방법**
-
-    ```
-    from sklearn.preprocessing import MinMaxScaler
-    
-    # 정규화 처리기 MinMaxScaler 인스턴스 생성
-    scaler = MinMaxScaler()
-
-    # 최대최소 변환을 위한 분포 탐색
-    scaler.fit(X_train)
-
-    # 정규화
-    X_train = scaler.transform(X_train)
-    ```
-
-</details>
-
 <details><summary><h3>분포가 들쑥날쑥한 경우</h3></summary>
 
 - **표준화(Standardization)**
-    - 정의 : 값의 분포를 평균이 0, 분산이 1인 표준정규분포(가우시안 정규 분포) 형태로 변환함
-    - 목적 : 모든 설명변수의 형태를 통계 분석의 가정에 부합하는 형태로 변환함
+
+    ![stanard](https://user-images.githubusercontent.com/116495744/222760130-bdcce494-0d8b-407c-8859-6ab6524b6127.jpg)
 
     ### $$x_{new}=\frac{x_i-mean(x)}{std(x)}$$
+
+    - 정의 : 값의 분포를 평균이 0, 분산이 1인 표준정규분포(가우시안 정규 분포) 형태로 변환함
+    - 목적 : 모든 설명변수의 형태를 통계 분석의 가정에 부합하는 형태로 변환함
 
 - **사용 방법**
 
@@ -215,14 +203,41 @@
 
 </details>
 
+<details><summary><h3>단위가 들쑥날쑥한 경우</h3></summary>
+
+- **정규화(Normalization)**
+
+    ![minmax](https://user-images.githubusercontent.com/116495744/222760155-d4fc55ff-3959-4b12-9acb-577c632ad958.jpg)
+
+    ### $$x_{new}=\frac{x_i-min(x)}{max(x)-min(x)}$$
+
+    - 정의 : 값의 범위를 특정하고 모든 설명변수의 분포를 해당 범위로 확대 혹은 축소함
+    - 목적 : 모든 설명변수의 크기를 통일하여 설명변수 간 상대적 크기가 주는 영향력을 최소화함
+
+- **사용 방법**
+
+    ```
+    from sklearn.preprocessing import MinMaxScaler
+    
+    # 정규화 처리기 MinMaxScaler 인스턴스 생성
+    scaler = MinMaxScaler()
+
+    # 최대최소 변환을 위한 분포 탐색
+    scaler.fit(X_train)
+
+    # 정규화
+    X_train = scaler.transform(X_train)
+    ```
+
+</details>
+
 <details><summary><h3>수치형 변수의 전처리 순서</h3></summary>
+
+![스케일링 비교](https://miro.medium.com/max/1400/1*0Ox-p57oxfmaVSaJyJWyPg.png)
 
 - **`RobustScaler` 👉  `StandardScaler` 👉 `MinMaxScaler` 순을 권장함**
     - 이상치가 존재할 경우 정규화에 따른 성능 개선 효과가 미미함
     - 정규화 이후 표준화를 하는 경우 설명변수별 범위가 재조정될 가능성이 있음
-
-- **표준화와 정규화의 차이점**
-    ![스케일링 차이](https://user-images.githubusercontent.com/116495744/222521330-0df348d5-05a0-4a45-9c4c-5591550ff2d2.jpeg)
 
 </details>
 
