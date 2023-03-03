@@ -2,7 +2,33 @@
 
 ---
 
-## 🔎 설명변수 탐색
+## 🔍 설명변수 탐색
+
+<details><summary><h3>설명변수 탐색</h3></summary>
+
+- **`info()` : 컬럼별 자료형, not-null 개수 등을 반환함**
+
+- **`describe()` : 컬럼별 값의 특성을 요약함**
+    - `include = None` : 특성을 요약할 자료형을 특정함
+        - `None` : 수치형 컬럼 값의 특성을 요약함
+            - `count`, `mean`, `std`, 사분위수 등
+        
+        - `object` : 범주형 컬럼 값의 특성을 요약함
+            - `count`, `unique`, `top`, `freq` 등
+        
+        - 특정할 자료형이 여러 개인 경우 해당 자료형을 기입한 리스트를 값으로 할당함
+            - 가령 `['number', 'object]`를 할당하면 수치형과 범주형 값의 특성을 요약함
+
+- **`value_counts()` : 컬럼별 고유값과 그 개수 혹은 비중을 요약함**
+    - `normalize = False` : 고유값 계산 방법
+        - `True` : 고유값의 비중을 계산함
+        - `False` : 고유값의 개수를 계산함
+
+    - `dropna = False` : 결측치 포함 여부
+        - `True` : 집계 시 결측치를 포함함
+        - `False` : 집계 시 결측치를 배제함
+
+</details>
 
 ---
 
@@ -34,7 +60,7 @@
 
 </details>
 
-<details><summary><h3>결측치 탐색 및 처리</h3></summary>
+<details><summary><h3>결측치 탐색</h3></summary>
     
 - **메소드 `isnull()`를 통한 결측치 탐색**
 
@@ -48,6 +74,22 @@
     # 각 컬럼별 결측치 비율 반환
     df.isnull().mean()
     ```
+
+- **모듈 `missingno`를 통한 결측치 분포 시각화**
+
+    ```
+    import missingno as msno
+
+    # 설명변수별 결측치 위치 시각화
+    msno.matrix(df = df)
+    
+    # 설명변수별 결측치 비율 시각화
+    msno.bar(df = df)
+    ```
+
+</details>
+
+<details><summary><h3>결측치 처리</h3></summary>
 
 - **메소드 `dropna()`를 통한 결측치가 포함된 레코드 제거**
 
