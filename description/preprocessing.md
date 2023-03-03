@@ -236,6 +236,7 @@ train_test_split()
 ![스케일링 비교](https://miro.medium.com/max/1400/1*0Ox-p57oxfmaVSaJyJWyPg.png)
 
 - **`RobustScaler` 👉  `StandardScaler` 👉 `MinMaxScaler` 순을 권장함**
+
     - 이상치가 존재할 경우 정규화에 따른 성능 개선 효과가 미미함
     - 정규화 이후 표준화를 하는 경우 설명변수별 범위가 재조정될 가능성이 있음
 
