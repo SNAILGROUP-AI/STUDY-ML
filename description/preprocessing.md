@@ -175,10 +175,12 @@
 
 <details><summary><h3>수치형 변수의 전처리 순서</h3></summary>
 
-![스케일링 차이](https://user-images.githubusercontent.com/116495744/222521330-0df348d5-05a0-4a45-9c4c-5591550ff2d2.jpeg)
+- **`RobustScaler` 👉  `StandardScaler` 👉 `MinMaxScaler` 순을 권장함**
+    - 이상치가 존재할 경우 정규화에 따른 성능 개선 효과가 미미함
+    - 정규화 이후 표준화를 하는 경우 설명변수별 범위가 재조정될 가능성이 있음
 
-- 이상치가 존재할 경우 정규화 과정에서 분포가 비정상적으로 촘촘해질 가능성이 높음
-- 따라서 `RobustScaler` 👉  `StandardScaler` 👉 `MinMaxScaler` 순으로 스케일링할 것을 권장함
+- **표준화와 정규화의 차이점**
+    ![스케일링 차이](https://user-images.githubusercontent.com/116495744/222521330-0df348d5-05a0-4a45-9c4c-5591550ff2d2.jpeg)
 
 </details>
 
