@@ -274,7 +274,7 @@
         - $a+b+c+d=1$
     - x에 대한 y의 승산비 $OR$ 은 다음과 같음
     
-    ### $$OR=\frac{\frac{a}{b}{\frac{c}{d}}$$
+    ### $$OR=\frac{{a} \over {b}{{c} \over {d}}$$
 
 - **사용 방법**
 
