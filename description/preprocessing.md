@@ -292,7 +292,7 @@
 
     - X가 참일 때의 회귀식과 거짓일 때의 회귀식을 빼면 다음의 결론을 도출할 수 있음
     
-    ### $$if X=1: ln(\frac{a}{b})=b+w\\if X=0: ln(\frac{c}{d})=b\\ln(\frac{a/b}{c/d})=w$$
+    ### $$if X=1: ln(\frac{a}{b})=b+w \\ if X=0: ln(\frac{c}{d})=b \\ ln(\frac{a/b}{c/d})=w$$
 
     - 즉, X에 대한 y의 승산비와 X의 가중치 w 간에는 다음의 관계가 성립함
 
