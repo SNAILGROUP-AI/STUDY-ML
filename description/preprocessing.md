@@ -293,14 +293,57 @@
 
 - **설명변수 간 피어슨 상관계수 시각화**
 
-    ```
-    ```
+    - **히트맵**
+
+        ```
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+        %matplotlib inline
+
+        # 설명변수 세트 X의 각 컬럼에 대하여 피어슨 상관계수 계산
+        X_corr = X.astype(float).corr()
+
+        # 히트맵 크기 설정
+        plt.figure(figsize = (25, 12))
+
+        # 팔레트 설정
+        colormap = plt.cm.Reds
+
+        # 히트맵 그리기
+        sns.heatmap(
+            X_corr,
+            cmap = colormap,
+            linewidths = 0.01, 
+            linecolor = 'white', 
+            vmax = 1.0, 
+            vmin = -1.0,
+            square = True,
+            annot = True, 
+            annot_kws = {"size" : 12}
+            )
+
+        plt.show()
+        ```
+
+    - **산점도**
+
+        ```
+        import matplotlib.pyplot as plt
+        import seaborn as sns
+        %matplotlib inline
+
+        # 산점도 크기 설정
+        plt.figure(figsize = (30, 30))
+
+        # 산점도 그리기
+        sns.pairplot(X)
+
+        plt.show()
+        ```
 
 - **분산팽창계수를 통한 변수 선별**
 
     ```
-    import numpy as np
-    import pandas as pd
     from statsmodels.stats.outliers_influence import variance_inflation_factor
 
     # 분산팽창계수 임계값 설정
