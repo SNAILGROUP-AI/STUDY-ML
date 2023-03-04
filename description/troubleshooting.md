@@ -22,6 +22,24 @@
 
 <details><summary><h3>K-Fold</h3></summary>
 
+![k fold 교차검증](https://i0.wp.com/drzinph.com/wp-content/uploads/2020/12/image-2.png?fit=935%2C670&ssl=1)
+
+</details>
+
+<details><summary><h3>Stratified K-Fold</h3></summary>
+
+![stratified k fold 교차검증](https://i0.wp.com/dataaspirant.com/wp-content/uploads/2020/12/8-Stratified-K-Fold-Cross-Validation.png?ssl=1)
+
+</details>
+
+<details><summary><h3>Stratified K-Fold</h3></summary>
+
+![stratified k fold 교차검증](https://i0.wp.com/dataaspirant.com/wp-content/uploads/2020/12/8-Stratified-K-Fold-Cross-Validation.png?ssl=1)
+
+</details>
+
+<details><summary><h3>cross_val_score</h3></summary>
+
 </details>
 
 ---
