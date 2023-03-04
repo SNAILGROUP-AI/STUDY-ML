@@ -298,6 +298,29 @@
 - **분산팽창계수를 통한 변수 선별**
 
     ```
+    import numpy as np
+    import pandas as pd
+    from statsmodels.stats.outliers_influence import variance_inflation_factor
+
+    # 분산팽창계수 임계값 설정
+    i = 10
+    
+    # 모든 설명변수의 분산팽창계수가 i 미만이 될 때까지 분산팽창계수가 가장 높은 설명변수를 제거하는 과정을 반복함
+    while True :
+        vif = pd.DataFrame()
+        vif['feature'] = X.columns
+        vif['VIF'] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
+        vif_max = vif['VIF'].max()
+        vif_max_col = vif[vif['VIF'] == vif_max].loc[:, 'feature']
+        
+        if vif_max >= i : X = X.drop(vif_max_col, axis = 1)
+        else : break
+
+    # 최종 설명변수들의 분산팽창계수 확인
+    print(vif)
+
+    # 설명변수 확인
+    print(X)
     ```
 
 </details>
