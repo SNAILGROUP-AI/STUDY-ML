@@ -252,11 +252,26 @@
 
 ## 📊 분류분석
 
-<details><summary><h3>불필요한 설명변수 제거</h3></summary>
+<details><summary><h3>무의미한 설명변수 제거</h3></summary>
 
 </details>
 
 <details><summary><h3>범주 간 불균형 문제</h3></summary>
+
+- **사용 방법**
+
+    ```
+    from imblearn.over_sampling import SMOTE
+
+    # smote 인스턴스 생성
+    sm = SMOTE(random_state = 121)
+
+    # 레코드가 부족한 범주 복제
+    X_train_over, y_train_over = sm.fit_resample(X_train, y_train)
+
+    print(f'SMOTE 적용 전 학습용 피처/레이블 데이터 세트 : {X_train.shape}, {y_train.shape}')
+    print(f'SMOTE 적용 후 학습용 피처/레이블 데이터 세트 : {X_train_over.shape}, {y_train_over.shape}')
+    ```
 
 </details>
 
