@@ -250,9 +250,9 @@
 
 ---
 
-## 📊 분류분석
+## ☑️ 설명변수 선별
 
-<details><summary><h3>무의미한 설명변수 제거</h3></summary>
+<details><summary><h3>분류분석 - 승산비 기준</h3></summary>
 
 - **승산비의 이해**
     - **승산(odds)**
@@ -286,7 +286,7 @@
 - **로지스틱 회귀식의 가중치의 이해**
     - 단순회귀분석 하의 로지스틱 회귀식은 다음과 같음
 
-    ### $$ln(\frac{p}{1-p})=b+wX$$
+    ### $$ln(\frac{p}{1-p})=w_0+wX$$
     
     - 이항범주형 반응변수 y와 이항범주형 설명변수 X에 대하여 다음과 같이 가정하자
         - x가 참일 때 y가 반응할 확률 : $a$
@@ -297,11 +297,11 @@
 
     - X가 참(1)일 때의 회귀식은 다음과 같음
     
-    ### $$ln(\frac{a}{b})=b+w$$
+    ### $$ln(\frac{a}{b})=w_0+w$$
 
     - X가 거짓(0)일 때의 회귀식은 다음과 같음
 
-    ### $$ln(\frac{c}{d})=b$$
+    ### $$ln(\frac{c}{d})=w_0$$
 
     - 두 회귀식을 빼면 다음과 같음
 
@@ -319,34 +319,21 @@
 - **사용 방법**
 
     ```
+    from sklearn.linear_model import LogisticRegression
+
+    lg_clf = LogisticRegression()
+    lg_clf.fit(X, y)
+
+    features = list(lg_clf.feature_names_in_)
+    weights = list(lg_clf.coef_)
+    odds_ratio = [np.exp(weights[i]) for i in range(weights)]
+
+    
     ```
 
 </details>
 
-<details><summary><h3>반응변수의 범주 간 불균형 문제</h3></summary>
-
-- **사용 방법**
-
-    ```
-    from imblearn.over_sampling import SMOTE
-
-    # smote 인스턴스 생성
-    sm = SMOTE(random_state = 121)
-
-    # 레코드가 부족한 범주 복제
-    X_train_over, y_train_over = sm.fit_resample(X_train, y_train)
-
-    print(f'SMOTE 적용 전 학습용 피처/레이블 데이터 세트 : {X_train.shape}, {y_train.shape}')
-    print(f'SMOTE 적용 후 학습용 피처/레이블 데이터 세트 : {X_train_over.shape}, {y_train_over.shape}')
-    ```
-
-</details>
-
----
-
-## 📈 회귀분석
-
-<details><summary><h3>설명변수 간 다중공선성 문제</h3></summary>
+<details><summary><h3>선형회귀분석 - 다중공선성 기준</h3></summary>
 
 - **다중공선성(Multicollinearity)**
     - **정의**
@@ -450,6 +437,29 @@
 
     # 설명변수 확인
     print(X)
+    ```
+
+</details>
+
+---
+
+## 📊 반응변수 전처리
+
+<details><summary><h3>분류분석 시 반응변수 레이블 간 레코드 불균형 문제</h3></summary>
+
+- **사용 방법**
+
+    ```
+    from imblearn.over_sampling import SMOTE
+
+    # smote 인스턴스 생성
+    sm = SMOTE(random_state = 121)
+
+    # 레코드가 부족한 범주 복제
+    X_train_over, y_train_over = sm.fit_resample(X_train, y_train)
+
+    print(f'SMOTE 적용 전 학습용 피처/레이블 데이터 세트 : {X_train.shape}, {y_train.shape}')
+    print(f'SMOTE 적용 후 학습용 피처/레이블 데이터 세트 : {X_train_over.shape}, {y_train_over.shape}')
     ```
 
 </details>
