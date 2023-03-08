@@ -2,7 +2,7 @@
 
 <details><summary><h3>데이터 세트 나누기</h3></summary>
 
-![](https://miro.medium.com/max/1400/0*DKB-pJy7-G6gEkM-)
+![데이터 세트 나누기](https://miro.medium.com/max/1400/0*DKB-pJy7-G6gEkM-)
 
 - **목적 : 인스턴스 훈련에 사용할 데이터 세트와 성능 평가에 사용할 데이터 세트를 구분하기 위함**
     
@@ -17,9 +17,8 @@
     from sklearn.model_selection import train_test_split
 
     # 데이터 세트를 설명변수 조합 X와 반응변수 y로 구분함
-    # 반응변수가 데이터프레임의 마지막 컬럼이라고 가정함
-    X = df.iloc[:, :-1]
-    y = df.iloc[:, -1]
+    X = df.drop(columns = [target])
+    y = df[[target]]
 
     # 데이터 세트를 훈련용과 평가용으로 분리함
     # 훈련용 데이터 세트를 (X_train, y_train), 평가용 데이터 세트를 (X_test, y_test)에 할당함
@@ -157,14 +156,24 @@
     ```
     from sklearn.preprocessing import RobustScaler
     
+    col = "이상치를 처리할 컬럼명"
+    before_scaled = X[[col]]
+
     # Turkey Fence 기법에 기반한 이상치 탐지 및 처리기 RobustScaler 인스턴스 생성
     scaler = RobustScaler()
 
     # 이상치 탐지
-    scaler.fit(X_train)
+    scaler.fit(before_scaled)
 
     # 이상치 처리
-    X_train = scaler.transform(X_train)
+    after_scaled = scaler.transform(before_scaled)
+
+    # 이상치 처리 전후 비교
+    before_scaled = before_scaled.rename(columns = {col : "before"})
+    after_scaled = after_scaled.rename(columns = {col : "after"})
+    scale_df = pd.concat([before_scaled, after_scaled], axis = 1)
+
+    print(scale_df)
     ```
 
 - **다음을 통해 스케일러의 정보를 확인할 수 있음**
@@ -189,14 +198,24 @@
     ```
     from sklearn.preprocessing import StandardScaler
     
+    col = "표준화할 컬럼명"
+    before_scaled = X[[col]]
+
     # 표준화 처리기 StandardScaler 인스턴스 생성
     scaler = StandardScaler()
 
     # 평균 및 분산 탐색
-    scaler.fit(X_train)
+    scaler.fit(before_scaled)
 
     # 표준화
-    X_train = scaler.transform(X_train)
+    after_scaled = scaler.transform(before_scaled)
+
+    # 표준화 전후 비교
+    before_scaled = before_scaled.rename(columns = {col : "before"})
+    after_scaled = after_scaled.rename(columns = {col : "after"})
+    scale_df = pd.concat([before_scaled, after_scaled], axis = 1)
+
+    print(scale_df)
     ```
 
 </details>
@@ -217,14 +236,24 @@
     ```
     from sklearn.preprocessing import MinMaxScaler
     
+    col = "정규화할 컬럼명"
+    before_scaled = X[[col]]
+
     # 정규화 처리기 MinMaxScaler 인스턴스 생성
     scaler = MinMaxScaler()
 
     # 최대최소 변환을 위한 분포 탐색
-    scaler.fit(X_train)
+    scaler.fit(before_scaled)
 
     # 정규화
-    X_train = scaler.transform(X_train)
+    after_scaled = scaler.transform(before_scaled)
+
+    # 정규화 전후 비교
+    before_scaled = before_scaled.rename(columns = {col : "before"})
+    after_scaled = after_scaled.rename(columns = {col : "after"})
+    scale_df = pd.concat([before_scaled, after_scaled], axis = 1)
+
+    print(scale_df)
     ```
 
 </details>
@@ -244,7 +273,94 @@
 
 ## 🔤 범주형 설명변수의 전처리
 
-<details><summary><h3>인코딩</h3></summary>
+<details><summary><h3>레이블 인코딩</h3></summary>
+
+- **사용 방법**
+
+    ```
+    from sklearn.preprocessing import LabelEncoder
+
+    col = "인코딩할 컬럼명"
+    before_encoded = X[[col]]
+
+    # 레이블 인코더 LabelEncoder 인스턴스 생성
+    label = LabelEncoder()
+
+    # 범주 탐색
+    label.fit(before_encoded)
+
+    # 레이블 인코딩
+    after_label = label.transform(before_encoded)
+    
+    # 레이블 인코딩 전후 비교
+    before_encoded = before_encoded.rename(columns = {col : "before"})
+    after_label = after_label.rename(columns = {col : "label"})
+    encode_df = pd.concat([before_encoded, after_label], axis = 1)
+
+    print(encode_df)
+    ```
+
+- **다음을 통해 인코더의 정보를 확인할 수 있음**
+    - `classes_` : 숫자별 매칭되어 있는 범주명
+    - `inverse_transform(xs)` : 리스트 $xs$에 대하여 그 원소들을 순차로 역인코딩하여 리스트에 저장한 후 해당 리스트를 반환함
+
+</details>
+
+<details><summary><h3>원 핫 인코딩</h3></summary>
+
+- **사용 방법**
+
+    ```
+    from sklearn.preprocessing import OneHotEncoder
+
+    # 원 핫 인코더 OneHotEncoder 인스턴스 생성
+    oht = OneHotEncoder()
+
+    # 레이블 인코딩한 3차원 행렬 after_label을 2차원 벡터로 변환
+    before_oht = after_label.reshape(-1, 1)
+
+    # 범주 탐색
+    oht.fit(before_oht)
+
+    # 원 핫 인코딩
+    after_oht = oht.transform(before_oht)
+
+    # 결과를 희소행렬 형태에서 밀집행렬 형태로 변환
+    after_oht = after_oht.toarray()
+
+
+ 
+    before_scaled = before_scaled.rename(columns = {col : "before"})
+    after_scaled = after_scaled.rename(columns = {col : "after"})
+    encode_df = pd.concat([before_scaled, after_scaled], axis = 1)
+
+    print(scale_df)
+
+    print(scale_df)
+    for col in cat_col :
+        xs = df[col]
+        
+        label = LabelEncoder()
+        xs = label.fit_transform(xs)
+        
+        xs = xs.reshape(-1, 1)
+        
+        oht = OneHotEncoder()
+        xs = oht.fit_transform(xs)
+        
+        xs = xs.toarray()
+
+        label_list = list(label.classes_)
+        label_list = [col + "_" + label_list[i] for i in range(len(label_list))]
+        
+        encoded_col = pd.DataFrame(xs, columns = label_list)
+        encoded_list.append(encoded_col)
+
+    encoded_df = pd.concat(encoded_list, axis = 1)
+    df = pd.concat([df, encoded_df], axis = 1)
+    df = df.drop(columns = cat_col)
+    ```
+
 
 </details>
 
@@ -320,6 +436,7 @@
 
     ```
     from sklearn.linear_model import LogisticRegression
+    import scipy.stats as st
 
     # 로지스틱 회귀 알고리즘 인스턴스 생성
     lg_clf = LogisticRegression()
@@ -340,6 +457,9 @@
 
     or_df = pd.DataFrame(or_dict, index = 'feature')
 
+    # 신뢰수준 설정
+    i = 0.95
+
     # 95% 신뢰수준 하에서 설명변수별 승산비의 신뢰구간 확인
     # or_df에 승산비의 최소치와 최대치 정보를 담은 칼럼 추가
     or_min_list = []
@@ -347,7 +467,7 @@
 
     for feature in features :
         ci = st.norm.interval(
-                alpha = 0.95, 
+                alpha = i, 
                 loc = or_df.loc[feature, 'or'], 
                 scale = st.sem(X[feature])
                 )
