@@ -321,14 +321,54 @@
     ```
     from sklearn.linear_model import LogisticRegression
 
+    # 로지스틱 회귀 알고리즘 인스턴스 생성
     lg_clf = LogisticRegression()
+
+    # 로지스틱 회귀분석 수행
     lg_clf.fit(X, y)
 
+    # 설명변수, 가중치, 승산비 정보를 담은 데이터프레임 or_df 생성
     features = list(lg_clf.feature_names_in_)
     weights = list(lg_clf.coef_)
     odds_ratio = [np.exp(weights[i]) for i in range(weights)]
 
+    or_dict = {
+        'feature' : features,
+        'weight' : weights,
+        'or' : odds_ratio
+    }
+
+    or_df = pd.DataFrame(or_dict, index = 'feature')
+
+    # 95% 신뢰수준 하에서 설명변수별 승산비의 신뢰구간 확인
+    # or_df에 승산비의 최소치와 최대치 정보를 담은 칼럼 추가
+    or_min_list = []
+    or_max_list = []
+
+    for feature in features :
+        ci = st.norm.interval(
+                alpha = 0.95, 
+                loc = or_df.loc[feature, 'or'], 
+                scale = st.sem(X[feature])
+                )
+        
+        or_min_list.append(ci[0])
+        or_max_list.append(ci[1])
     
+    or_df['or_min'] = or_min_list
+    or_df['or_max'] = or_max_list
+
+    # 신뢰구간에 1이 포함되어 있는지 확인
+    # or_df에 신뢰구간에 1 포함 여부 정보를 담은 칼럼 추가
+    drop_list = []
+
+    for feature in features :
+        if (or_df.loc[feature, 'or_min'] <= 1) and (or_df.loc[feature, 'or_max'] >= 1) : drop_list.append(True)
+        else : drop_list.append(False)
+    
+    or_df['drop'] = drop_list
+
+    print(or_df)
     ```
 
 </details>
