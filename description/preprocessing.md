@@ -185,6 +185,11 @@
 
 <details><summary><h3>레이블 인코딩</h3></summary>
 
+- **Label Encoding : 고유값의 자료형을 문자형에서 숫자형으로 변환하는 절차**
+    - 범주형 변수의 고유값(unique)은 대개 문자열(str) 형태를 띠고 있음
+    - 하지만 Machine Learning Algorithm 은 숫자형만을 인식하고 처리하도록 설계되어 있음
+    - 따라서 범주형 변수의 고유값을 숫자로 매칭하는 절차가 선행되어야 함
+
 - **사용 방법**
 
     ```
@@ -210,13 +215,19 @@
     print(encode_df)
     ```
 
-- **다음을 통해 인코더의 정보를 확인할 수 있음**
+- **다음을 통해 레이블 인코더의 정보를 확인할 수 있음**
     - `classes_` : 숫자별 매칭되어 있는 범주명
-    - `inverse_transform(xs)` : 리스트 $xs$에 대하여 그 원소들을 순차로 역인코딩하여 리스트에 저장한 후 해당 리스트를 반환함
+    - `inverse_transform(xs)` : 벡터 $xs$에 대하여 그 원소들을 순차로 역인코딩한 벡터를 반환함
 
 </details>
 
 <details><summary><h3>원 핫 인코딩</h3></summary>
+
+- **One-Hot Encoding : 다항범주형 변수를 n개의 이항범주형 변수로 분할하는 절차**
+    - 범주형 변수 혹은 질적 변수는 그 값들을 양적 측면에서 차이점을 비교할 수 없는 변수임
+    - 따라서 레이블 인코딩을 통해 표면적으로는 수치의 형태를 띠게 되었다고 해도, 실질적으로는 수치형 변수 혹은 양적 변수로서의 성질(기수성, 서수성 등)을 가지지 않음
+    - 하지만 Machine Learning Algorithm 은 레이블 인코딩한 범주형 변수를 수치형 변수로서 인식하고 범주를 양적 측면에서 고려함
+    - 따라서 범주형 변수로서 성질을 보존하기 위해 다항범주형 변수 1개를 그 고유값별로 이진범주형 변수 n개로 분할함
 
 - **사용 방법**
 
@@ -238,39 +249,18 @@
     # 결과를 희소행렬 형태에서 밀집행렬 형태로 변환
     after_oht = after_oht.toarray()
 
+    # 결과를 행렬 형태에서 데이터프레임 형태로 변환
+    after_oht = pd.DataFrame(after_oht, columns = label.classes_)
 
- 
-    before_scaled = before_scaled.rename(columns = {col : "before"})
-    after_scaled = after_scaled.rename(columns = {col : "after"})
-    encode_df = pd.concat([before_scaled, after_scaled], axis = 1)
+    # 원 핫 인코딩 전후 비교
+    encode_df = pd.concat([before_encoded, after_oht], axis = 1)
 
-    print(scale_df)
-
-    print(scale_df)
-    for col in cat_col :
-        xs = df[col]
-        
-        label = LabelEncoder()
-        xs = label.fit_transform(xs)
-        
-        xs = xs.reshape(-1, 1)
-        
-        oht = OneHotEncoder()
-        xs = oht.fit_transform(xs)
-        
-        xs = xs.toarray()
-
-        label_list = list(label.classes_)
-        label_list = [col + "_" + label_list[i] for i in range(len(label_list))]
-        
-        encoded_col = pd.DataFrame(xs, columns = label_list)
-        encoded_list.append(encoded_col)
-
-    encoded_df = pd.concat(encoded_list, axis = 1)
-    df = pd.concat([df, encoded_df], axis = 1)
-    df = df.drop(columns = cat_col)
+    print(encode_df)
     ```
 
+- **다음을 통해 레이블 인코더의 정보를 확인할 수 있음**
+    - `classes_` : 숫자별 매칭되어 있는 범주명
+    - `inverse_transform(xs)` : 행렬 $xs$에 대하여 그 원소들을 순차로 역인코딩한 행렬을 반환함
 
 </details>
 
