@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=F5ECCE&height=150&section=header&text=Model%Selection&fontSize=40" width=100%/>
+<img src="https://capsule-render.vercel.app/api?type=cylinder&color=F5ECCE&height=100&section=header&text=Model%Selection&fontSize=40" width=100%/></br>
 
 ## ✂︎ 데이터 세트 나누기
 

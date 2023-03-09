@@ -1,6 +1,4 @@
-<h1 align="center"> 🙎‍♂️ Ensemble 🙍‍♀️ </h1>
-
----
+<img src="https://capsule-render.vercel.app/api?type=cylinder&color=F5ECCE&height=100&section=header&text=Ensemble&fontSize=40" width=100%/></br>
 
 ## 👨‍👩‍👦 Ensemble
 

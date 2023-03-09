@@ -1,6 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=F5ECCE&height=100&section=header&text=Preprocessing&fontSize=40" width=100%/>
-
-</br>
+<img src="https://capsule-render.vercel.app/api?type=cylinder&color=F5ECCE&height=100&section=header&text=Preprocessing&fontSize=40" width=100%/></br>
 
 ## 🔢 Numerical Feature Engineering
 
