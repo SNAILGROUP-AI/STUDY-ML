@@ -1,7 +1,3 @@
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=auto&fontColor=000000&stroke=FFFFFF&strokeWidth=1&height=100&section=header&text=What?%20Machine%20Learning&fontSize=40" width=100%/>
-
-</br>
-
 ## 👨‍🔧 머신러닝이란 무엇인가
 
 <details><summary><h3>정의</h3></summary>

@@ -1,7 +1,3 @@
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=auto&fontColor=000000&stroke=FFFFFF&strokeWidth=1&height=100&section=header&text=Preprocessing&fontSize=40" width=100%/>
-
-</br>
-
 ## 🔢 Numerical Feature Engineering
 
 <details><summary><h3>이상치가 존재하는 경우</h3></summary>
@@ -221,8 +217,8 @@
     print(encode_df)
     ```
 
-- **다음을 통해 레이블 인코더의 정보를 확인할 수 있음**
-    - `classes_` : 숫자별 매칭되어 있는 범주명
+- **다음을 통해 원 핫 인코더의 정보를 확인할 수 있음**
+    - `categories_` : 벡터별 매칭되어 있는 범주명
     - `inverse_transform(xs)` : 행렬 $xs$에 대하여 그 벡터들을 순차로 역인코딩한 행렬을 반환함
 
 </details>
@@ -504,7 +500,7 @@
     from imblearn.over_sampling import SMOTE
 
     # smote 인스턴스 생성
-    sm = SMOTE(random_state = 121)
+    sm = SMOTE()
 
     # 레코드가 부족한 범주 복제
     X_train_over, y_train_over = sm.fit_resample(X_train, y_train)
@@ -512,5 +508,8 @@
     print(f'SMOTE 적용 전 학습용 피처/레이블 데이터 세트 : {X_train.shape}, {y_train.shape}')
     print(f'SMOTE 적용 후 학습용 피처/레이블 데이터 세트 : {X_train_over.shape}, {y_train_over.shape}')
     ```
+
+- **주요 하이퍼파라미터**
+    - `random_state = None`
 
 </details>

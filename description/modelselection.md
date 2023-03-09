@@ -1,7 +1,3 @@
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=auto&fontColor=000000&stroke=FFFFFF&strokeWidth=1&height=100&section=header&text=Model%20Selection&fontSize=40" width=100%/>
-
-</br>
-
 ## ✂︎ 데이터 세트 나누기
 
 <details><summary><h3>train_test_split</h3></summary>
@@ -43,7 +39,7 @@
 
 ---
 
-## 🫵 과적합
+## 🫵 과적합 방지하기
 
 <details><summary><h3>Overfitting & Underfitting</h3></summary>
 
@@ -63,8 +59,6 @@
         - 현상 :  학습용 데이터 세트 예측 성능과 그 이외의 데이터 세트 예측 성능 모두 현저하게 낮음
 
 - **해법 : 교차검증**
-    - **k-겹 교차검증** : 
-    - **층화 k-겹 교차검증** : 반응변수의 범주 비율이 모집단의 비율과 동일하도록 구성하여 교차검증함
 
 </details>
 
@@ -77,10 +71,6 @@
 <details><summary><h3>Stratified K-Fold</h3></summary>
 
 ![stratified k fold 교차검증](https://i0.wp.com/dataaspirant.com/wp-content/uploads/2020/12/8-Stratified-K-Fold-Cross-Validation.png?ssl=1)
-
-</details>
-
-<details><summary><h3>cross_val_score</h3></summary>
 
 </details>
 
@@ -140,5 +130,7 @@
     ```
 
 - **주요 하이퍼파라미터**
+
+- **다음의 속성을 통해 훈련된 모델의 정보를 확인할 수 있음**
 
 </details>

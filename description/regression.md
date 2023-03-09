@@ -1,7 +1,3 @@
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=auto&fontColor=000000&stroke=FFFFFF&strokeWidth=1&height=100&section=header&text=Regression%20Analysis&fontSize=40" width=100%/>
-
-</br>
-
 ## 🤓 회귀분석이란 무엇인가
 
 - **정의 : 데이터를 요약하는 수렴 작업**

@@ -1,7 +1,3 @@
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=auto&fontColor=000000&stroke=FFFFFF&strokeWidth=1&height=100&section=header&text=Classification%20Analysis&fontSize=40" width=100%/>
-
-</br>
-
 ## 🤓 분류분석이란 무엇인가
 
 - **정의 : 데이터를 나누는 발산 작업**
