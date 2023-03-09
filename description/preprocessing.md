@@ -514,9 +514,19 @@
     - 모든 레코드를 $F$ 라고 예측하면 정확도는 높으나 제2종 오류가 다수 발생함
 
 - **해법 : UnderSampling & OverSampling**
-    - **UnderSampling** : 개수가 많은 범주에 해당하는 레코드 중 일부만 선별하여 해당 범주의 규모를 축소함
-    - **OverSampling** : 개수가 적은 범주에 해당하는 레코드와 특성이 유사한 레코드를 다수 생성하여 해당 범주의 규모를 확대함
-    - Machine Learning 시 데이터 수가 많을수록 성능이 개선될 가능성이 높기 때문에 통상적으로는 **OverSampling** 을 선택함
+    - **UnderSampling**
+        - 정의 : 개수가 많은 범주의 규모를 축소함
+        - 방법 : 개수가 많은 범주에 해당하는 레코드 중 일부만 선별함
+        - 문제 : 데이터 소실 문제
+
+    - **OverSampling**
+        - 정의 : 개수가 적은 범주의 규모를 확대함
+        - 방법 : 개수가 적은 범주에 해당하는 레코드와 특성이 유사한 레코드를 다수 생성함
+        - 문제 : 과대적합 문제
+
+    - 통상적으로는 **OverSampling** 을 선택함
+        - Machine Learning 시 데이터 수가 많을수록 성능이 개선될 가능성이 높음
+        - 따라서 **OverSampling** 후 교차검증 등을 통해 과대적합될 가능성을 줄임
 
 - **SMOTE(Synthetic Minority Oversampling Technique)**
     - 정의 : 최근접 이웃 알고리즘을 활용하는 **OverSampling** 기법
