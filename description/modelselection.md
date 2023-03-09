@@ -47,7 +47,7 @@
 
 <details><summary><h3>Overfitting & Underfitting</h3></summary>
 
-<img src="https://user-images.githubusercontent.com/116495744/224099360-bddf58ce-231b-4900-a743-5612d12219b2.PNG" width=100%/>
+![IMG_6998](https://user-images.githubusercontent.com/116495744/224102355-22013084-f81b-43af-a971-56793c18c9e9.jpeg)
 
 - **정의 : 모델이 일반화되지 못하는 현상**
 
