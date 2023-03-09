@@ -226,6 +226,7 @@
 ### $$\displaystyle\sum_{i=1}^{n}{\frac{(y_i-\hat{y})^2}{(y_i-\overline{y})^2}}$$
 
 - **결정계수(Coefficient of Determination; r2-score)**
+
     - 정의 : 모분산 대비 표본분산 비율
     - 해석 : 0~1 사이의 값을 가지며, 값이 클수록 회귀식의 적합도가 높다고 판단함
 
@@ -236,6 +237,7 @@
 ### $$MSE=\displaystyle\sum_{i=1}^{n}{\frac{(y_i-\hat{y})^2}{n}}$$
 
 - **평균제곱오차(Mean Squared Error; MSE)**
+
     - 정의 : 오차를 제곱한 값의 평균
     - 해석 : 값이 작을수록 회귀식의 적합도가 높다고 판단함
     - 문제점 : 오차를 제곱하므로 값을 과장할 수 있음
@@ -247,6 +249,7 @@
 ### $$RMSE=\sqrt{\displaystyle\sum_{i=1}^{n}{\frac{(y_i-\hat{y})^2}{n}}}$$
 
 - **평균제곱근오차(Root Mean Squared Error; RMSE)**
+
     - 정의 : 평균제곱오차의 제곱근
     - 목적 : 평균제곱오차에 제곱근하는 절차를 더하여 오차의 크기가 과장된 정도를 줄임
 
@@ -257,6 +260,7 @@
 ### $$ MAE = \frac{1}{n}\sum_{i=1}^{n}\left|Y_{i}-\hat{Y}_{i}\right| $$
 
 - **평균절대오차(Mean Absolute Error; MAE)**
+
     - 정의 : 오차 절대값의 평균
     - 목적 : 오차를 제곱한 값 대신 오차의 절대값을 활용하여 오차의 크기가 과장될 여지를 없앰
 
