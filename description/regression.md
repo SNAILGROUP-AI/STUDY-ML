@@ -1,3 +1,7 @@
+<h1 align="center"> 📈 Regression Analysis 🔍 </h1>
+
+---
+
 ## 🤓 회귀분석이란 무엇인가
 
 - **정의 : 데이터를 요약하는 수렴 작업**

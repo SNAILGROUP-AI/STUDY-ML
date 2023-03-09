@@ -20,7 +20,7 @@
 
 - [**Preprocessing**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/preprocessing.md)
 
-- [**TroubleShooting**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/troubleshooting.md)
+- [**Model Selection**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/modelselection.md)
 
 ### unsupervised
 
