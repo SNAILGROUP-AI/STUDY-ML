@@ -505,7 +505,9 @@
 
 ## 📊 Target Engineering
 
-<details><summary><h3>분류분석 시 반응변수 레이블 간 레코드 불균형 문제</h3></summary>
+<details><summary><h3>분류분석 시 반응변수 범주 간 레코드 불균형 문제</h3></summary>
+
+- 
 
 - **사용 방법**
 

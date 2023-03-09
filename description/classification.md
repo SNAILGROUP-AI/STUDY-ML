@@ -309,7 +309,7 @@
 
 </details>
 
-<details><summary><h3>오차행렬</h3></summary>
+<details><summary><h3>오차행렬의 이해</h3></summary>
 
 - **오차행렬(confusion matrix)**
 
@@ -345,6 +345,8 @@
 
 <details><summary><h3>정확도(Accuracy)</h3></summary>
 
+### $TP+TN \over TP+TN+FP+FN$
+
 - **정의 : 전체 예측 개수 대비 정확하게 예측한 개수**
     - 해석 : 0~1 사이의 값을 가지며 1에 가까울수록 성능이 우수하다고 평가함
     - 목적 : 실제 데이터와 예측 데이터가 얼마나 동일한지를 평가 기준으로 하는 지표
@@ -356,6 +358,8 @@
 </details>
 
 <details><summary><h3>F1-Score</h3></summary>
+
+### $$F1 = 2 \times \frac{precision \times recall}{precision + recall} = 2 \times \frac{\frac{TP}{TP+FP} \times \frac{TP}{TP+FN}}{\frac{TP}{TP+FP} + \frac{TP}{TP+FN}}$$
 
 - **정의 : 정밀도와 재현율의 조화 평균**
     - 해석 : 0~1 사이의 값을 가지며 1에 가까울수록 성능이 우수하다고 평가함
@@ -371,7 +375,7 @@
     - 정의 : 참인 것의 개수 대비 참으로 예측한 것의 개수로서 민감도(sensitivity)라고도 부름
     - 해석 : 0~1 사이의 값을 가지며 1에 가까울수록 성능이 우수하다고 평가함
     - 용도 : 제2종 오류가 문제되는 경우 주요한 지표로서 사용됨
-    - 즉, 실제 참일 데이터를 거짓으로 판단하면 큰 문제가 되는 경우
+    - 즉, 실제 참인 데이터를 거짓으로 판단하면 큰 문제가 되는 경우
 
 - **정밀도와 재현율의 관계**
     - **정밀도와 재현율은 모두 TP를 높이는 것을 목적으로 함**
@@ -390,7 +394,7 @@
 
 </details>
 
-<details><summary><h3>AUC</h3></summary>
+<details><summary><h3>ROC-AUC Score</h3></summary>
 
 - **ROC 곡선**
     - **민감도(True Positive Rate; TPR)** :  참인 것에 대하여 참으로 예측한 비율
