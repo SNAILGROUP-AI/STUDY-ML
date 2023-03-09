@@ -1,4 +1,6 @@
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=F5ECCE&height=100&section=header&text=Classification%20Analysis&fontSize=40" width=100%/></br>
+<img src="https://capsule-render.vercel.app/api?type=cylinder&color=F5ECCE&height=100&section=header&text=Classification%20Analysis&fontSize=40" width=100%/>
+
+</br>
 
 ## 🤓 분류분석이란 무엇인가
 

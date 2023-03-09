@@ -1,1 +1,3 @@
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=F5ECCE&height=100&section=header&text=Principle%20Component%20Analysis&fontSize=40" width=100%/></br>
+<img src="https://capsule-render.vercel.app/api?type=cylinder&color=F5ECCE&height=100&section=header&text=Principle%20Component%20Analysis&fontSize=40" width=100%/>
+
+</br>
