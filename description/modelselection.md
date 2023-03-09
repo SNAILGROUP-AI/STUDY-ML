@@ -47,7 +47,7 @@
 
 <details><summary><h3>Overfitting & Underfitting</h3></summary>
 
-![](https://gratus907.github.io/images/81b7294441f2b9c96cce938661b95a1d20d22366e5c0f72e48d2c69c9c7ad7b4.png)
+<img src="https://user-images.githubusercontent.com/116495744/224099360-bddf58ce-231b-4900-a743-5612d12219b2.PNG" width=100%/>
 
 - **정의 : 모델이 일반화되지 못하는 현상**
 
