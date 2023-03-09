@@ -24,9 +24,9 @@
 
 ### unsupervised
 
-- [**Cluster**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/7.cluster.md)
+- [**Cluster**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/cluster.md)
 
-- [**PCA**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/8.pca.md)
+- [**Principal Component Analysis**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/pca.md)
 
 ---
 
