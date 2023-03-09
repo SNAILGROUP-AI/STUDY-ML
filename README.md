@@ -12,15 +12,13 @@
 
 ### supervised
 
-- [**Preprocessing**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/preprocessing.md)
-
 - [**Classification**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/classification.md)
 
 - [**Ensemble**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/ensemble.md)
 
 - [**Regression**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/regression.md)
 
-- [**Score**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/score.md)
+- [**Preprocessing**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/preprocessing.md)
 
 - [**TroubleShooting**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/troubleshooting.md)
 
