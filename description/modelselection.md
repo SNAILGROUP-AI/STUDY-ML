@@ -1,6 +1,4 @@
-<h1 align="center"> ✅ Model Selection ✅ </h1>
-
----
+<img src="https://capsule-render.vercel.app/api?type=cylinder&color=F5ECCE&height=150&section=header&text=Model%Selection&fontSize=40" width=100%/>
 
 ## ✂︎ 데이터 세트 나누기
 
