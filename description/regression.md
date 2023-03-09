@@ -257,7 +257,7 @@
 
 <details><summary><h3>평균절대오차</h3></summary>
 
-### $$ MAE = \frac{1}{n}\sum_{i=1}^{n}\left|Y_{i}-\hat{Y}_{i}\right| $$
+### $$RAE=\displaystyle\sum_{i=1}^{n}{\frac{|y_i-\hat{y_i}|}{n}}$$
 
 - **평균절대오차(Mean Absolute Error; MAE)**
 
