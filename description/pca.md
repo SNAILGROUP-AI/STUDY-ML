@@ -39,8 +39,6 @@
 
 <details><summary><h3>직관적 이해</h3></summary>
 
-![다운로드](https://user-images.githubusercontent.com/116495744/224133921-5397746a-ee81-4f4f-a1d6-5aeb5759d926.png)
-
 - **Whitening**
 
     ![IMG_7004](https://user-images.githubusercontent.com/116495744/224222107-98d84b92-79bd-47c0-b430-aa2584b9e22f.JPG)
@@ -49,17 +47,20 @@
     - 데이터 세트를 그래프에 묘사함
 
 - **주성분 추출**
+
+    ![29571075-D199-4C47-8A70-DCC02FF2458B](https://user-images.githubusercontent.com/116495744/224223522-5b2f4407-c8af-40e8-bce1-fa58fd49bb50.jpg)
+
     - 원점을 지나는 직선 중에서 모든 레코드를 사영했을 때 SS가 가장 큰 직선을 찾음
     - 원점을 지나고 앞서 구한 직선과 직교하면서 SS가 가장 큰 직선을 찾음
     - 원점을 지나고 앞서 구한 직선들과 직교하면서 SS가 가장 큰 직선을 찾음
     - 위 과정을 반복하면서 차원의 갯수만큼의 직선을 찾음
 
 - **주성분 선별**
-    - **주성분(Principle Component; PC)의 정의**
+    - **주성분(Principle Component; PC)**
         - 위 절차를 통해 찾은 직선들을 해당 데이터 세트의 주성분이라고 정의함
     
-    - **SS(Sum of Squared Distance)의 해석**
-        - 정의 : 원점과 사영점 간 거리 제곱의 합
+    - **SS(Sum of Squared Distance)**
+        - 원점과 사영점 간 거리 제곱의 합을 해당 주성분의 SS라고 정의함
         - 원점과 특정 레코드의 사영점 간 거리의 제곱을 해당 레코드의 주성분값으로 해석함
         - 전체 주성분의 SS 대비 특정 주성분의 SS를 해당 직선이 전체 특성을 설명하는 정도로 해석함
     
@@ -71,7 +72,36 @@
 
 <details><summary><h3>수학적 이해</h3></summary>
 
-![pics_eigen](https://user-images.githubusercontent.com/116495744/224134029-aa7822f5-5733-45e3-912b-a5b11dcada08.png)
+- **주요 개념**
+    - **분산(Variance; Var)**
+    
+        - 정의 : 단차원 데이터 세트에 대하여 평균점을 중심으로 레코드가 흩어진 정도
+    
+    - **공분산(Covariance; Cov)**
+
+        - 정의 : 다차원 데이터 세트에 대하여 평균점을 중심으로 레코드가 흩어진 정도
+        - 해석 : 2개의 축을 가정했을 때, 한 확률변수의 증감에 따른 다른 확률변수의 증감 경향성
+    
+    - **공분산행렬(Covariance Matrix)**
+
+        - 정의 : 분산
+ 
+        - **상관관계와 공분산행렬**
+            - **상관행렬(Correlation Matrix)** : 공분산행렬을 정규화한 행렬
+            - **피어슨 상관계수(Pearson Correlation Coefficient)** : 상관행렬을 구성하는 스칼라
+ 
+        - **선형변환과 공분산행렬**
+
+            ![공분산행렬과 고유벡터](https://user-images.githubusercontent.com/116495744/224226188-05975c29-4ac8-4572-b796-fb7eec3bab5a.jpeg)
+
+            - 임의의 행렬 P에 대하여 그 공분산행렬을 행렬 Q에 내적하는 경우
+            - 그래프상으로 표현된 Q의 분포가 P의 분포와 유사한 형태로 변환됨
+
+    - **고유벡터(EigenVector)**
+    
+    - **고유값(EigenValue)**
+
+![사영](https://user-images.githubusercontent.com/116495744/224226095-898ac9a8-9cec-4b0d-a553-074bbc6a1ffd.jpeg)
 
 </details>
 
