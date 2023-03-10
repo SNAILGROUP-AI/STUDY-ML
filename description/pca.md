@@ -17,22 +17,38 @@
         - 설명변수에 관한 정보가 없으므로 지도학습 시 차원 축소 기법들을 사용할 수 없음
         - 따라서 다수의 차원들을 대표할 수 있는 주요한 성분들을 추출함으로써 차원을 축소해야 함
 
-- **주성분 분석(Principle Component Analysis)**
-    - 정의 : 변수 간에 존재하는 상관관계를 이용하여 이를 대표하는 주성분을 추출하여 차원을 축소하는 기법
-    - 이슈 : 정보(특성) 유실 문제
-    - 해법 : 분산을 최대한 보존함으로써 레코드 간 특성별 차이를 보존함
-
 ---
 
 ## 주성분 분석
+
+<details><summary><h3>주성분 분석(Principle Component Analysis; PCA)</h3></summary>
+
+- **주성분 분석(Principle Component Analysis)**
+
+    - **정의 : 변수 간에 존재하는 상관관계를 이용하여 이를 대표하는 주성분을 추출하여 차원을 축소하는 기법**
+
+    - **이슈 : 정보(특성) 유실 문제**
+
+        ![04AD38E4-3544-4BEC-952C-0B4542AA1538](https://user-images.githubusercontent.com/116495744/224222113-e15b8091-9a64-4a49-bd7d-916d4bb75874.jpg)
+
+    - **해법 : 분산을 최대한 보존함으로써 레코드 간 특성별 차이를 보존함**
+
+        ![IMG_7017](https://user-images.githubusercontent.com/116495744/224222115-02d0ecb3-112d-4417-a39f-8d69f91ad84f.jpg)
+
+</details>
 
 <details><summary><h3>직관적 이해</h3></summary>
 
 ![다운로드](https://user-images.githubusercontent.com/116495744/224133921-5397746a-ee81-4f4f-a1d6-5aeb5759d926.png)
 
-- **주성분 추출**
+- **Whitening**
+
+    ![IMG_7004](https://user-images.githubusercontent.com/116495744/224222107-98d84b92-79bd-47c0-b430-aa2584b9e22f.JPG)
+
     - N개의 설명변수에 대하여 모든 설명변수의 평균을 원점으로 하는 N차원 그래프를 생성함
     - 데이터 세트를 그래프에 묘사함
+
+- **주성분 추출**
     - 원점을 지나는 직선 중에서 모든 레코드를 사영했을 때 SS가 가장 큰 직선을 찾음
     - 원점을 지나고 앞서 구한 직선과 직교하면서 SS가 가장 큰 직선을 찾음
     - 원점을 지나고 앞서 구한 직선들과 직교하면서 SS가 가장 큰 직선을 찾음
