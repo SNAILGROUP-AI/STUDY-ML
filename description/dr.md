@@ -48,6 +48,17 @@
 
 <details><summary><h3>주성분 분석이란 무엇인가</h3></summary>
 
+- **사영(Projection)**
+
+    ![은하](https://t1.daumcdn.net/cfile/tistory/99CB343359F2DA5E07)
+
+    - **정의 : 선형 차원 축소 기법**
+        - 고차원 입체의 형태를 가장 잘 나타낼 수 있는 저차원 단면을 찾는 행위
+    
+    - **종류**
+        - 주성분 분석(Principle Component Analysis; PCA)
+        - 선형 판별 분석(Linear Discriminant Analysis; LDA)
+
 - **주성분 분석(Principle Component Analysis)**
 
     - **정의 : 변수 간에 존재하는 상관관계를 이용하여 이를 대표하는 주성분을 추출하여 차원을 축소하는 기법**
@@ -59,6 +70,10 @@
     - **해법 : 분산을 최대한 보존함으로써 레코드 간 특성별 차이를 보존함**
 
         ![IMG_7017](https://user-images.githubusercontent.com/116495744/224222115-02d0ecb3-112d-4417-a39f-8d69f91ad84f.jpg)
+
+</details>
+
+<details><summary><h3>주성분 분석의 이해</h3></summary>
 
 - **주성분 분석의 직관적 이해**
 
@@ -79,13 +94,13 @@
         - 위 과정을 반복하면서 차원의 갯수만큼의 직선을 찾음
 
     - **주성분 선별**
-        - **주성분(Principle Component; PC)**
-            - 위 절차를 통해 찾은 직선들을 해당 데이터 세트의 주성분이라고 정의함
+        - **직선**
+            - 위 절차를 통해 찾은 직선들을 해당 데이터 세트의 주성분(Principle Component; PC)이라고 정의함
         
         - **SS(Sum of Squared Distance)**
-            - 원점과 사영점 간 거리 제곱의 합을 해당 주성분의 SS라고 정의함
+            - 원점과 사영점 간 거리 제곱의 합을 해당 직선의 SS라고 정의함
             - 원점과 특정 레코드의 사영점 간 거리의 제곱을 해당 레코드의 주성분값으로 해석함
-            - 전체 주성분의 SS 대비 특정 주성분의 SS를 해당 직선이 전체 특성을 설명하는 정도로 해석함
+            - 전체 직선의 SS 대비 특정 직선의 SS를 해당 직선이 전체 특성을 설명하는 정도로 해석함
         
         - **주성분 선별**
             - N차원 데이터 세트를 k차원으로 줄이고자 하는 경우
@@ -95,14 +110,19 @@
     
     - **주성분 추출**
         - 데이터 세트의 공분산행렬을 구함
-        
         - 공분산행렬의 고유벡터와 고유값을 구함
-            - **고유벡터** : 해당 데이터 세트의 주성분
-            - **고유값** : 해당 주성분의 SS(Sum of Squared Distance)
     
     - **주성분 선별**
-        - 고유벡터를 고유값 기준으로 내림차순 정렬
-        - 원하는 차원 수만큼 고유벡터를 선별
+        - **고유벡터(EigenVector)**
+            - 위 절차를 통해 찾은 고유벡터를 해당 데이터 세트의 주성분이라고 정의함
+            - 특정 레코드에 대응하는 고유벡터의 원소를 해당 레코드의 주성분값으로 해석함
+        
+        - **고유값(EigenValue)**
+            - 전체 고유벡터의 고유값 대비 특정 고유벡터의 고유값을 해당 고유벡터가 전체 특성을 설명하는 정도로 해석함
+        
+        - **주성분 선별**
+            - 고유벡터를 고유값 기준으로 내림차순 정렬
+            - 원하는 차원 수만큼 고유벡터를 선별
 
 </details>
 
@@ -191,6 +211,28 @@
 ---
 
 ## t-SNE(t-distributed Stochastic Neighbor Embedding)
+
+<details><summary><h3>t-SNE 란 무엇인가</h3></summary>
+
+- **다양체 학습(Manifold Learning)**
+    ![IMG_355193D3C896-1](https://user-images.githubusercontent.com/116495744/224497076-8a2e6100-88a5-444c-abb9-377e61e961ee.jpeg)
+    
+    ![IMG_7076](https://user-images.githubusercontent.com/116495744/224497029-3bc16551-ba2a-454e-9868-a77335636858.jpg)
+
+    - **정의 : 비선형 차원 축소 기법**
+        - **다양체(Manifold)** : 고차원 데이터 세트를 공간에 묘사했을 때, 해당 데이터 세트의 레코드들을 잘 아우를 수 있는 저차원 공간(SubSpace)
+        - **다양체 학습(Manifold Learning)** : 고차원 데이터 세트를 잘 설명할 수 있는 다양체를 찾아 해당 데이터 세트의 차원을 축소하는 기법
+
+    - **종류**
+        - t-SNE(t-distributed Stochastic Neighbor Embedding)
+        - LLE(Locally Linear Embedding)
+        - ISOMAP
+        - MDS(Multi-Dimensioning Scaling)
+        - AE(Auto Encoder)
+
+- **t-SNE(t-distributed Stochastic Neighbor Embedding)**
+
+</details>
 
 ---
 
