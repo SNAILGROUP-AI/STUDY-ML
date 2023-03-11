@@ -215,8 +215,9 @@
 <details><summary><h3>t-SNE 란 무엇인가</h3></summary>
 
 - **다양체 학습(Manifold Learning)**
+
     ![IMG_355193D3C896-1](https://user-images.githubusercontent.com/116495744/224497076-8a2e6100-88a5-444c-abb9-377e61e961ee.jpeg)
-    
+
     ![IMG_7076](https://user-images.githubusercontent.com/116495744/224497029-3bc16551-ba2a-454e-9868-a77335636858.jpg)
 
     - **정의 : 비선형 차원 축소 기법**
