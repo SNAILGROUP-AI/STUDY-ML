@@ -75,13 +75,21 @@
 - **주요 개념**
     - **분산(Variance; Var)**
 
-        ### $$ var(X) = \displaystyle\sum_{i=0}^{n}\frac{(X-\overline{X})^2}{n} $$
+        <h3>
+        $$
+        var(X) = \displaystyle\sum_{i=0}^{n}\frac{(X-\overline{X})^2}{n}
+        $$
+        </h3>
 
         - 정의 : 단차원 데이터 세트에 대하여 평균점을 중심으로 레코드가 흩어진 정도
     
     - **공분산(Covariance; Cov)**
 
-        ### $$ cov(X, Y) = \displaystyle\sum_{i=0}^{n}\frac{(X_i-\overline{X})(Y_i-\overline{Y})}{n} $$
+        <h3>
+        $$
+        cov(X, Y) = \displaystyle\sum_{i=0}^{n}\frac{(X_i-\overline{X})(Y_i-\overline{Y})}{n}
+        $$
+        </h3>
 
         - 정의 : 다차원 데이터 세트에 대하여 평균점을 중심으로 레코드가 흩어진 정도
         - 해석 : 2개의 축을 가정했을 때, 한 변수의 증감에 따른 다른 변수의 증감 경향성
@@ -89,10 +97,10 @@
     - **공분산행렬(Covariance Matrix)**
 
         <h3>
-            $$ \begin
-            {pmatrix} var(X) & cov(X, Y) \\
-            cov(Y, X) & var(Y) \\ 
-            \end{pmatrix} $$
+        $$ \begin
+        {pmatrix} var(X) & cov(X, Y) \\
+        cov(Y, X) & var(Y) \\ 
+        \end{pmatrix} $$
         </h3>
 
         - **정의**
