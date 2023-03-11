@@ -112,7 +112,7 @@
 
     - **고유벡터(EigenVector)와 고유값(EigenValue)**
 
-        $$\sum \times V = \lambda V$$
+        $$\sum \bullet V = \lambda \times V$$
 
         - **고유벡터(EigenVector)** : 임의의 데이터 세트에 대하여 그 공분산행렬을 내적하여 선형변환하더라도 방향이 변환 전과 동일한 벡터
         - **고유값(EigenValue)** : 임의의 데이터 세트에 대하여 그 공분산행렬을 내적하기 전 고유벡터의 길이 대비 내적한 후 고유벡터의 길이
