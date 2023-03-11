@@ -78,22 +78,25 @@
         $$var(X) = \displaystyle\sum_{i=0}^{n}\frac{(X-\overline{X})^2}{n}$$
 
         - 정의 : 단차원 데이터 세트에 대하여 평균점을 중심으로 레코드가 흩어진 정도
-    
+
     - **공분산(Covariance; Cov)**
 
         $$cov(X, Y) = \displaystyle\sum_{i=0}^{n}\frac{(X_i-\overline{X})(Y_i-\overline{Y})}{n}$$
 
         - 정의 : 다차원 데이터 세트에 대하여 평균점을 중심으로 레코드가 흩어진 정도
         - 해석 : 2개의 축을 가정했을 때, 한 변수의 증감에 따른 다른 변수의 증감 경향성
-    
+
     - **공분산행렬(Covariance Matrix)**
-        
-        $$ \begin{pmatrix} var(X) & cov(X, Y) \\
-        cov(Y, X) & var(Y) \end{pmatrix} $$
+
+        $$ \sum = 
+        \begin{pmatrix}
+        var(X) & cov(X, Y) \\
+        cov(Y, X) & var(Y)
+        \end{pmatrix} $$
 
         - **정의**
             - 다차원 데이터 세트를 구성하는 변수(혹은 축) $X, Y, Z, \cdots$ 에 대하여
-            - $i$ 번째, $j$ 번째 변수(혹은 축)의 공분산을 $(i, j)$ 의 값으로 가지는 행렬
+            - $i$ 번째, $j$ 번째 변수(혹은 축)의 공분산을 $(i, j)$ 의 값으로 가지는 정방행렬
 
         - **상관관계와 공분산행렬**
             - **상관행렬(Correlation Matrix)** : 공분산행렬을 정규화한 행렬
@@ -106,9 +109,16 @@
             - 임의의 행렬 P에 대하여 그 공분산행렬을 행렬 Q에 내적하는 경우
             - 그래프상으로 표현된 Q의 분포가 P의 분포와 유사한 형태로 변환됨
 
-    - **고유벡터(EigenVector)**
+    - **고유벡터(EigenVector)와 고유값(EigenValue)**
+
+        $$\sum \times V = \lambda V$$
+
+        - **고유벡터(EigenVector)** : 임의의 데이터 세트에 대하여 그 공분산행렬을 내적하여 선형변환하더라도 방향이 변환 전과 동일한 벡터
+        - **고유값(EigenValue)** : 임의의 데이터 세트에 대하여 그 공분산행렬을 내적하기 전 고유벡터의 길이 대비 내적한 후 고유벡터의 길이
     
-    - **고유값(EigenValue)**
+- **주성분 분석의 수학적 이해**
+
+
 
 </details>
 
