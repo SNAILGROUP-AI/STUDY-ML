@@ -88,7 +88,8 @@
     
     - **공분산행렬(Covariance Matrix)**
 
-        $$ \begin{pmatrix} var(X) & cov(X, Y) \\ cov(Y, X) & var(Y) \end{pmatrix} $$ 
+        $$ \begin{pmatrix} var(X) & cov(X, Y) \\
+        cov(Y, X) & var(Y) \end{pmatrix} $$
 
         - **정의**
             - 다차원 데이터 세트를 구성하는 변수(혹은 축) $X, Y, Z, \cdots$ 에 대하여
