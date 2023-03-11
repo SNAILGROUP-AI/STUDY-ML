@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=wave&color=4682B4&customColorList=27&height=175&section=header&text=Machine%20Learning&fontSize=60&fontColor=FFA500&animation=twinkling" width=100%/>
+<img src="https://capsule-render.vercel.app/api?type=wave&color=4682B4&customColorList=27&height=175&section=header&text=Machine%20Learning&fontSize=60&fontColor=FFA500&animation=twinkling&stroke=FFFFFF&strokeWidth=1" width=100%/>
 
 - 학습 기간 : 2022. 09. 26. ~ 30.
 
