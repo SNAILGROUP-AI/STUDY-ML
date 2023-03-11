@@ -48,7 +48,7 @@
 
 - **주성분 추출**
 
-    ![29571075-D199-4C47-8A70-DCC02FF2458B](https://user-images.githubusercontent.com/116495744/224223522-5b2f4407-c8af-40e8-bce1-fa58fd49bb50.jpg)
+    ![사영](https://user-images.githubusercontent.com/116495744/224226095-898ac9a8-9cec-4b0d-a553-074bbc6a1ffd.jpeg)
 
     - 원점을 지나는 직선 중에서 모든 레코드를 사영했을 때 SS가 가장 큰 직선을 찾음
     - 원점을 지나고 앞서 구한 직선과 직교하면서 SS가 가장 큰 직선을 찾음
@@ -74,17 +74,30 @@
 
 - **주요 개념**
     - **분산(Variance; Var)**
-    
+
+        ### $$ var(X) = \displaystyle\sum_{i=0}^{n}\frac{(X-\overline{X})^2}{n} $$
+
         - 정의 : 단차원 데이터 세트에 대하여 평균점을 중심으로 레코드가 흩어진 정도
     
     - **공분산(Covariance; Cov)**
 
+        ### $$ cov(X, Y) = \displaystyle\sum_{i=0}^{n}\frac{(X_i-\overline{X})(Y_i-\overline{Y})}{n} $$
+
         - 정의 : 다차원 데이터 세트에 대하여 평균점을 중심으로 레코드가 흩어진 정도
-        - 해석 : 2개의 축을 가정했을 때, 한 확률변수의 증감에 따른 다른 확률변수의 증감 경향성
+        - 해석 : 2개의 축을 가정했을 때, 한 변수의 증감에 따른 다른 변수의 증감 경향성
     
     - **공분산행렬(Covariance Matrix)**
 
-        - 정의 : 분산
+        <h3>
+            $$ \begin
+            {pmatrix} var(X) & cov(X, Y) \\
+            cov(Y, X) & var(Y) \\ 
+            \end{pmatrix} $$
+        </h3>
+
+        - **정의**
+            - 다차원 데이터 세트를 구성하는 변수(혹은 축) $X, Y, Z, \cdots$ 에 대하여
+            - $i$ 번째, $j$ 번째 변수(혹은 축)의 공분산을 $(i, j)$ 의 값으로 가지는 행렬
  
         - **상관관계와 공분산행렬**
             - **상관행렬(Correlation Matrix)** : 공분산행렬을 정규화한 행렬
@@ -100,8 +113,6 @@
     - **고유벡터(EigenVector)**
     
     - **고유값(EigenValue)**
-
-![사영](https://user-images.githubusercontent.com/116495744/224226095-898ac9a8-9cec-4b0d-a553-074bbc6a1ffd.jpeg)
 
 </details>
 
