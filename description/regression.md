@@ -39,7 +39,7 @@
 
     - 샘플 $i$ 에 대하여 반응변수와 설명변수의 회귀식은 다음과 같음
         
-        ### $$Y_i=b+wX_i+e_i$$
+        $$Y_i=b+wX_i+e_i$$
 
         - $b$ : 편향성; 설명변수의 영향력이 모두 제거되었을 때 반응변수의 상태
         - $w$ : 가중치; 반응변수 $Y_i$ 에 대한 설명변수 $X_i$ 의 영향력
@@ -61,7 +61,7 @@
     - 정의 : 잔차 제곱의 합을 최소화하는 회귀식을 도출하는 방법
     - 잔차 제곱의 합을 최소화한다는 것은 다음을 의미함
         
-        ### $$\min\displaystyle\sum_{i=1}^ne_i^2=\min\sum_{i=1}^n(Y_i-b-wX_i)^2$$
+        $$\min\displaystyle\sum_{i=1}^ne_i^2=\min\sum_{i=1}^n(Y_i-b-wX_i)^2$$
 
 </details>
 
@@ -112,7 +112,7 @@
         - 정의 : 손실을 반응변수, 가중치의 조합을 설명변수로 가지는 함수
             - 평균제곱오차(MSE)에 기초한 손실함수는 다음으로 정의됨
 
-                ### $$LOSS_{MSE}=\frac{1}{N}\displaystyle\sum_{i=1}^n (\hat{Y_i}-Y_i)^2$$
+                $$LOSS_{MSE}=\frac{1}{N}\displaystyle\sum_{i=1}^n (\hat{Y_i}-Y_i)^2$$
 
         - **손실(Loss)** : 어떠한 방법에 따라 잔차를 계산한 값
 
@@ -225,14 +225,14 @@
 
 - **결정계수(Coefficient of Determination; r2-score)**
 
-    ### $$\displaystyle\sum_{i=1}^{n}{\frac{(y_i-\hat{y})^2}{(y_i-\overline{y})^2}}$$
+    $$\displaystyle\sum_{i=1}^{n}{\frac{(y_i-\hat{y})^2}{(y_i-\overline{y})^2}}$$
 
     - 정의 : 모분산 대비 표본분산 비율
     - 해석 : 0~1 사이의 값을 가지며, 값이 클수록 회귀식의 적합도가 높다고 판단함
 
 - **평균제곱오차(Mean Squared Error; MSE)**
 
-    ### $$MSE=\displaystyle\sum_{i=1}^{n}{\frac{(y_i-\hat{y})^2}{n}}$$
+    $$MSE=\displaystyle\sum_{i=1}^{n}{\frac{(y_i-\hat{y})^2}{n}}$$
 
     - 정의 : 오차를 제곱한 값의 평균
     - 해석 : 값이 작을수록 회귀식의 적합도가 높다고 판단함
@@ -240,14 +240,14 @@
 
 - **평균제곱근오차(Root Mean Squared Error; RMSE)**
 
-    ### $$RMSE=\sqrt{\displaystyle\sum_{i=1}^{n}{\frac{(y_i-\hat{y})^2}{n}}}$$
+    $$RMSE=\sqrt{\displaystyle\sum_{i=1}^{n}{\frac{(y_i-\hat{y})^2}{n}}}$$
 
     - 정의 : 평균제곱오차의 제곱근
     - 목적 : 평균제곱오차에 제곱근하는 절차를 더하여 오차의 크기가 과장된 정도를 줄임
 
 - **평균절대오차(Mean Absolute Error; MAE)**
 
-    ### $$RAE=\displaystyle\sum_{i=1}^{n}{\frac{|y_i-\hat{y_i}|}{n}}$$
+    $$RAE=\displaystyle\sum_{i=1}^{n}{\frac{|y_i-\hat{y_i}|}{n}}$$
 
     - 정의 : 오차 절대값의 평균
     - 목적 : 오차를 제곱한 값 대신 오차의 절대값을 활용하여 오차의 크기가 과장될 여지를 없앰
@@ -259,5 +259,3 @@
 ## 📝 Practice
 
 - [**실습 코드**]()
-
-- [**데이터 명세서**]()

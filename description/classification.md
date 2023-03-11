@@ -210,31 +210,42 @@
     ![시그모이드 함수](https://user-images.githubusercontent.com/116495744/221402155-596e45c2-5d0d-40a6-ae23-9589b48f807c.png)
 
     - **연결함수** : 회귀식의 결과값을 이항범주로 변환하는 함수
-        ### $$y=f(x)=b+wX$$
+        
+        $$y=f(x)=b+wX$$
+        
         - $y$ : 이항 반응변수
         - $f(x)$ : 연결함수(Link Function)
         - $b+wX$ : 회귀식
     
     - **승산(odds)** : 이항범주를 성패로 정의할 때, 1번 실패할 때 성공할 횟수
-        ### $$odds=\frac{p}{1-p}$$
+        
+        $$odds=\frac{p}{1-p}$$
+        
         - $p$ : 성공할 확률
         - $1-p$ : 실패할 확률
     
     - **로짓(logist + Probit)** : 승산에 대하여 자연로그를 취한 값
-        ### $$ln(\frac{p}{1-p})$$
+        $$ln(\frac{p}{1-p})$$
+        
         - 로짓 변환은 승산의 범위를 선형 회귀식의 범위와 일치시키기 위한 작업임
-        ### $$0 \lt p\lt 1$$
+        
+        $$0 \lt p\lt 1$$
+        
         - 성공할 확률 p는 0~1 사이의 값을 가짐
-        ### $$0 \lt \frac{p}{1-p} \lt \infty$$
+        
+        $$0 \lt \frac{p}{1-p} \lt \infty$$
+        
         - 승산은 양의 실수 범위 값을 가짐
-        ### $$\infty \lt ln(\frac{p}{1-p}) \lt \infty$$
+        
+        $$\infty \lt ln(\frac{p}{1-p}) \lt \infty$$
+        
         - 로짓은 음의 무한대에서 양의 무한대까지 실수 전범위 값을 취할 수 있음
     
     - **로짓(logit) 함수** : 연결함수를 로짓으로 가지는 선형 회귀식
-        ### $$ln({\frac{p}{1-p}})=b+wX$$
+        $$ln({\frac{p}{1-p}})=b+wX$$
 
     - **시그모이드(sigmoid) 함수** : 로짓 함수의 역함수로서 로지스틱 함수라고도 부름
-        ### $$p=\frac{e^{b+wX}}{1+e^{b+wX}}$$
+        $$p=\frac{e^{b+wX}}{1+e^{b+wX}}$$
 
 </details>
 
@@ -345,7 +356,7 @@
 
 <details><summary><h3>정확도(Accuracy)</h3></summary>
 
-### $TP+TN \over TP+TN+FP+FN$
+$$TP+TN \over TP+TN+FP+FN$$
 
 - **정의 : 전체 예측 개수 대비 정확하게 예측한 개수**
     - 해석 : 0~1 사이의 값을 가지며 1에 가까울수록 성능이 우수하다고 평가함
@@ -359,7 +370,7 @@
 
 <details><summary><h3>F1-Score</h3></summary>
 
-### $$F1 = 2 \times \frac{precision \times recall}{precision + recall} = 2 \times \frac{\frac{TP}{TP+FP} \times \frac{TP}{TP+FN}}{\frac{TP}{TP+FP} + \frac{TP}{TP+FN}}$$
+$$F1 = 2 \times \frac{precision \times recall}{precision + recall} = 2 \times \frac{\frac{TP}{TP+FP} \times \frac{TP}{TP+FN}}{\frac{TP}{TP+FP} + \frac{TP}{TP+FN}}$$
 
 - **정의 : 정밀도와 재현율의 조화 평균**
     - 해석 : 0~1 사이의 값을 가지며 1에 가까울수록 성능이 우수하다고 평가함
@@ -422,5 +433,3 @@
 ## 📝 Practice
 
 - [**실습 코드**]()
-
-- [**데이터 명세서**]()
