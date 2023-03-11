@@ -87,7 +87,7 @@
         - 해석 : 2개의 축을 가정했을 때, 한 변수의 증감에 따른 다른 변수의 증감 경향성
     
     - **공분산행렬(Covariance Matrix)**
-
+        
         $$ \begin{pmatrix} var(X) & cov(X, Y) \\
         cov(Y, X) & var(Y) \end{pmatrix} $$
 
@@ -98,7 +98,7 @@
         - **상관관계와 공분산행렬**
             - **상관행렬(Correlation Matrix)** : 공분산행렬을 정규화한 행렬
             - **피어슨 상관계수(Pearson Correlation Coefficient)** : 상관행렬을 구성하는 스칼라
- 
+
         - **선형변환과 공분산행렬**
 
             ![공분산행렬과 고유벡터](https://user-images.githubusercontent.com/116495744/224226188-05975c29-4ac8-4572-b796-fb7eec3bab5a.jpeg)
