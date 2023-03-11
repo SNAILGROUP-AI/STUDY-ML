@@ -89,10 +89,10 @@
     - **공분산행렬(Covariance Matrix)**
 
         $$ 
-        \begin{pmatrix} 
-        var(X) & cov(X, Y) \\ 
-        cov(Y, X) & var(Y) 
-        \end{pmatrix} 
+            \begin{pmatrix} 
+            var(X) & cov(X, Y) \\ 
+            cov(Y, X) & var(Y) 
+            \end{pmatrix} 
         $$ 
 
         - **정의**
