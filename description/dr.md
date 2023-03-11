@@ -197,8 +197,8 @@
     ![IMG_7076](https://user-images.githubusercontent.com/116495744/224497029-3bc16551-ba2a-454e-9868-a77335636858.jpg)
 
     - **정의 : 비선형 차원 축소 기법**
-        - **다양체(Manifold)** : 고차원 데이터 세트를 공간에 묘사했을 때, 해당 데이터 세트의 레코드들을 잘 아우를 수 있는 저차원 공간(SubSpace)
-        - **다양체 학습(Manifold Learning)** : 고차원 데이터 세트를 잘 설명할 수 있는 다양체를 찾아 해당 데이터 세트의 차원을 축소하는 기법
+        - **다양체(Manifold)** : 데이터 세트를 고차원 공간에 묘사했을 때, 그 레코드들을 잘 아우를 수 있는 저차원 공간(SubSpace)
+        - **다양체 학습(Manifold Learning)** : 데이터 세트를 잘 아우를 수 있는 다양체를 찾아 해당 데이터 세트의 차원을 축소하는 기법
 
     - **종류**
         - t-SNE(t-distributed Stochastic Neighbor Embedding)
