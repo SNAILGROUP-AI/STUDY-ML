@@ -24,9 +24,9 @@
 
 ### unsupervised
 
-- [**k-Means**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/k-means.md)
+- [**Cluster**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/cluster.md)
 
-- [**Principal Component Analysis**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/pca.md)
+- [**Dimensionality Reduction**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/dr.md)
 
 ---
 
