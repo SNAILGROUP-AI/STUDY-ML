@@ -9,12 +9,20 @@
 - **차원 축소(Dimensionality Reduction)**
     - **정의 : 데이터 세트의 차원, 곧 설명변수의 개수를 줄이는 작업**
 
-    - **지도학습에서의 차원 축소**
+    - **차원 축소 방법**
+        - **차원 선별**
+            - 차원 선별(Feature Selection)
+
+        - **차원 추출**
+            - 선형 차원 축소(Matrix Factor or Projection)
+            - 비선형 차원 축소(Neighbor Graphs or Manifold Learning)
+
+    - **지도학습 : 차원 선별 방식**
         - 반응변수에 관한 정보를 바탕으로 유의미하지 않은 설명변수를 선별하여 제거함
         - 분류분석 : 승산비 기준 유의미하지 않은 설명변수 제거
         - 선형회귀분석 : 선형회귀분석의 4개 가정 하에 분산팽창계수 기준 다중공선성이 낮지 않은 설명변수 제거
     
-    - **비지도학습에서의 차원 축소**
+    - **비지도학습 : 차원 추출 방식**
         - 반응변수에 관한 정보가 없으므로 지도학습의 차원 선별 기법들을 사용할 수 없음
         - 따라서 다수의 차원들을 대표할 수 있는 주요한 성분을 추출함으로써 차원을 축소해야 함
 
@@ -34,18 +42,25 @@
     - **종류**
         - 주성분 분석(Principle Component Analysis; PCA)
         - 선형 판별 분석(Linear Discriminant Analysis; LDA)
+        - LDA(Linear Discriminant Analysis)
+        - NMF(Non-Negative Matrix Factorization)
 
 - **주성분 분석(Principle Component Analysis)**
 
-    - **정의 : 변수 간에 존재하는 상관관계를 이용하여 이를 대표하는 주성분을 추출하여 차원을 축소하는 기법**
+    - **정의**
+        - 변수 간에 존재하는 상관관계를 이용하여 이를 대표하는 주성분을 추출하여 차원을 축소하는 기법
 
-    - **이슈 : 정보(특성) 유실 문제**
+    - **이슈**
 
         ![04AD38E4-3544-4BEC-952C-0B4542AA1538](https://user-images.githubusercontent.com/116495744/224222113-e15b8091-9a64-4a49-bd7d-916d4bb75874.jpg)
 
-    - **해법 : 분산을 최대한 보존함으로써 레코드 간 특성별 차이를 보존함**
+        - 정보(특성) 유실 문제
+
+    - **해법**
 
         ![IMG_7017](https://user-images.githubusercontent.com/116495744/224222115-02d0ecb3-112d-4417-a39f-8d69f91ad84f.jpg)
+
+        - 분산을 최대한 보존함으로써 레코드 간 특성별 차이를 보존함
 
 </details>
 
@@ -208,6 +223,19 @@
         - AE(Auto Encoder)
 
 - **t-SNE(t-distributed Stochastic Neighbor Embedding)**
+
+</details>
+
+<details><summary><h3>SK-Learn의 t-SNE 알고리즘</h3></summary>
+
+- **사용 방법**
+
+    ```
+    from sklearn.manifold import TSNE
+
+    tsne = TSNE()
+    ```
+
 
 </details>
 
