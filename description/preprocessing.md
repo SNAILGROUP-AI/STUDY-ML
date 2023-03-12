@@ -59,7 +59,7 @@
 
 - **표준화(Standardization)**
 
-    ![stanard](https://user-images.githubusercontent.com/116495744/222760130-bdcce494-0d8b-407c-8859-6ab6524b6127.jpg)
+    ![IMG_7B45F39033D0-1](https://user-images.githubusercontent.com/116495744/224533161-5ea1809e-c436-4af3-ad9e-ceadc0595052.jpeg)
 
     $$x_{new}=\frac{x_i-mean(x)}{std(x)}$$
 
@@ -97,7 +97,7 @@
 
 - **정규화(Normalization)**
 
-    ![minmax](https://user-images.githubusercontent.com/116495744/222760155-d4fc55ff-3959-4b12-9acb-577c632ad958.jpg)
+    ![IMG_534CD74C5A6C-1](https://user-images.githubusercontent.com/116495744/224533156-db9ae2f5-2c3d-4dd5-b4ef-bc5f22b4bb51.jpeg)
 
     $$x_{new}=\frac{x_i-min(x)}{max(x)-min(x)}$$
 
