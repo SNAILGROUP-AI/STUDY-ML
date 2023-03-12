@@ -209,8 +209,6 @@
 
     ![IMG_355193D3C896-1](https://user-images.githubusercontent.com/116495744/224497076-8a2e6100-88a5-444c-abb9-377e61e961ee.jpeg)
 
-    ![IMG_7076](https://user-images.githubusercontent.com/116495744/224497029-3bc16551-ba2a-454e-9868-a77335636858.jpg)
-
     - **정의 : 비선형 차원 축소 기법**
         - **다양체(Manifold)** : 데이터 세트를 고차원 공간에 묘사했을 때, 그 레코드들을 잘 아우를 수 있는 저차원 공간(SubSpace)
         - **다양체 학습(Manifold Learning)** : 데이터 세트를 잘 아우를 수 있는 다양체를 찾아 해당 데이터 세트의 차원을 축소하는 기법
@@ -223,6 +221,16 @@
         - AE(Auto Encoder)
 
 - **t-SNE(t-distributed Stochastic Neighbor Embedding)**
+    - **정의**
+        - 고차원 공간에서 인접한(Neighbor) 두 벡터가 저차원 공간에서도 인접하도록 고차원에서의 유사도를 보존하며 차원을 축소하는 방법
+    
+    - **방법**
+        - 데이터 세트를 고차원 공간에 묘사함
+        - 레코드 i, j에 대하여, 고차원 공간에서 i, j 간 거리의 기대값 $p$ 를 계산함
+        - 저차원 공간에서 i, j 간 거리의 기대값 $q$ 를 계산함
+        - $p$, $q$ 의 차이를 반영하는 손실함수 $C(p, q)$ 를 정의함
+        - 손실을 최소화하는 저차원 공간을 해당 데이터 세트의 다양체로 정의함
+        - 데이터 세트의 차원을 다양체로 변환함
 
 </details>
 
@@ -234,8 +242,11 @@
     from sklearn.manifold import TSNE
 
     tsne = TSNE()
+
+    X = tsne.fit_transform(X)
     ```
 
+- **주요 하이퍼파라미터**
 
 </details>
 
