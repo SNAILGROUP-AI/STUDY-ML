@@ -29,7 +29,7 @@
 
 ---
 
-## k-Means
+## 🧚‍♀️ k-Means
 
 <details><summary><h3>k-Means 란 무엇인가</h3></summary>
 
@@ -163,7 +163,7 @@
 
 ---
 
-## DBSCAN(Density-Based Spatial Clustering of Applications with Noise)
+## 🧚‍♀️ DBSCAN(Density-Based Spatial Clustering of Applications with Noise)
 
 <details><summary><h3>DBSCAN 이란 무엇인가</h3></summary>
 
@@ -232,12 +232,9 @@
 
 <details><summary><h3>V-measure</h3></summary>
 
-- **군집 분석의 목표**
-    - 군집 간 거리는 멀고, 군집 내 레코드 간 거리는 가깝게 군집화하는 것
-
-- **V-measure 의 정의**
+- **정의**
     - 균질성과 완전성의 조화 평균
-    
+
         - **균질성(Homogeneity)** : 각 군집(예측값)이 동일한 실제값으로 구성되어 있는 정도
         - **완전성(Completeness)** : 각 실제값에 대하여 동일한 군집(예측값)으로 구성되어 있는 정도
 
@@ -268,9 +265,26 @@
 
 <details><summary><h3>실루엣 계수(Silhouette Coefficient)</h3></summary>
 
-- **군집 분석의 목표** : 군집 간 거리는 멀고, 군집 내 레코드 간 거리는 가깝게 군집화하는 것
+- **군집 분석의 목표**
+    - 군집 간 거리는 멀고, 군집 내 레코드 간 거리는 가깝게 군집화하는 것
 
-- **실루엣 계수(Silhouette Coefficient)의 정의**
+- **정의**
+
+    $$
+    overall-average-silhouette-width=\displaystyle\sum_{i=0}^{n}\frac{s(i)}{n} \\
+    s(i)=\frac{b(i)-a(i)}{max(a(i), b(i))}
+    $$
+
+    - $a(i)$ : 데이터 세트의 레코드 $i$ 에 대하여 $i$ 가 속한 군집 내 레코드들과의 평균 거리
+    
+    - $b(i)$ : 데이터 세트의 레코드 $i$ 에 대하여 $d(i, C)$ 의 최소값
+        - $d(i, C)$ : 레코드 $i$ 가 속하지 않은 군집 $C$ 에 대하여 $i$ 와 $C$ 의 레코드들과의 평균 거리
+
+- **해석**
+    - -1~1 사이의 값을 가짐
+    - 1에 가까울수록 군집 간 거리는 멀고, 군집 내 레코드 간 거리는 가깝다고 해석함
+    - 0에 가까울수록 군집 간 거리가 가깝다고 해석함
+    - -1에 가까울수록 군집 내 레코드 간 거리보다 군집 외 레코드 간 거리가 가깝다고 해석함
 
 - **사용 방법**
 
