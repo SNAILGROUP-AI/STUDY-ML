@@ -270,10 +270,10 @@
 
 - **정의**
 
-    $$
-    overall-average-silhouette-width=\displaystyle\sum_{i=0}^{n}\frac{s(i)}{n} \\
-    s(i)=\frac{b(i)-a(i)}{max(a(i), b(i))}
-    $$
+    $$ \begin{align}
+    silhouette&=\displaystyle\sum_{i=0}^{n}\frac{s(i)}{n}\\
+    s(i)&=\frac{b(i)-a(i)}{max(a(i), b(i))}
+    \end{align} $$
 
     - $a(i)$ : 데이터 세트의 레코드 $i$ 에 대하여 $i$ 가 속한 군집 내 레코드들과의 평균 거리
     
