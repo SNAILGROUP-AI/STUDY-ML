@@ -59,13 +59,105 @@
 - **사용 방법**
 
     ```
+    from sklearn.cluster import KMeans
+    from sklearn.metrics import silhouette_score
+
+    k = "군집 갯수 설정"
+
+    # k-Means 알고리즘 인스턴스 생성
+    km = KMeans(n_clusters = k)
+
+    # 군집화 훈련
+    km.fit(X)
+
+    # 군집 분석 수행 및 결과 저장
+    y_redict = km.predict(X)
+
+    # 대표적인 성능 평가 지표인 실루엣 계수를 통한 성능 평가
+    score = silhouette_score(X, y_predict)
+
+    print(score)
     ```
 
 - **주요 하이퍼파라미터**
+    - `random_state = None`
+
+    - `n_clusters` : 군집 갯수
+
+    - `init = 'k-means++'` : 중심점 초기화 방법
+        - `random` : 무작위 방식
+        - `k-means++` : k-means++ 방식
+
+    - `n_init = 10` : 초기 중심점 탐색 횟수로서 $n$ 번의 탐색 후 `Means` 가 가장 낮은 중심점을 선택함
+
+    - `max_iter = None` : 중심점 이동 최대 횟수 설정
 
 - **다음의 속성을 통해 훈련된 모델의 정보를 확인할 수 있음**
+    - `labels_` : 각 레코드가 속한 군집 번호
+    - `cluster_centers_` : 군집별 중심점 위치
+    - `n_iter_` : 중심점 이동 횟수
+    - `inertia_` : 군집별 응집도 평균으로서 수치가 낮을수록 응집도가 높다고 판단함
+    - `n_features_in_` : 설명변수 개수
+    - `feature_names_in_` : 설명변수명
 
-- **최적의 k 구하기**
+- **최적의 k 구하기** : `inertia_` 활용
+
+    ```
+    import matplotlib.pyplot as plt
+
+    # 군집 갯수를 1~10까지 설정
+    ks = range(1, 10)
+    
+    # 응집도를 저장할 리스트 생성
+    inertias = []
+
+    # 군집 분석 수행
+    for k in ks:
+        km = KMeans(n_clusters = k)
+        km.fit(X)
+        inertias.append(km.inertia_)
+
+    # k의 변화에 따른 응집도 변화 양상 시각화    
+    plt.plot(ks, inertias, '-o')
+    plt.xticks(ks)
+    plt.xlabel('number of clusters(k)')
+    plt.ylabel('inertia')
+
+    plt.show()
+    ```
+
+- **군집화 결과 시각화(2차원 가정)** : `cluster_centers_` 활용
+
+    ```
+    import matplotlib.pyplot as plt
+    from matplotlib.colors import ListedColormap
+
+    X["y"] = km.labels_
+
+    # 군집별 레코드 분포 시각화
+    plt.scatter(
+        X.iloc[:, 0], 
+        X.iloc[:, 1], 
+        marker = 'o', 
+        s = 50, 
+        c = X["y"], 
+        edgecolor = 'black')
+
+    # 군집별 중심점 위치 시각화
+    plt.scatter(
+        km.cluster_centers_[:, 0], 
+        km.cluster_centers_[:, 1],
+        marker = '*', 
+        s = 250, 
+        c = 'red', 
+        edgecolor = 'black')
+
+    # 축 이름 기입
+    plt.xlabel(X.columns[0])
+    plt.ylabel(X.columns[1])
+    
+    plt.show()
+    ```
 
 </details>
 
@@ -91,7 +183,7 @@
     ![IMG_7115](https://user-images.githubusercontent.com/116495744/224615745-cd9d88fe-c4d4-4f90-9d8c-a989a8ffff3d.PNG)
 
     - **핵심 요소(Core)** : 밀도의 중심이 되는 레코드
-        - **최소 요소(Minimum number of neighbors)** : 핵심 요소 지정 조건으로서 해당 요소의 직경 내에 레코드가 몇 개 존재해야 하는가
+        - **최소 요소(Minimum number of neighbors)** : 핵심 요소 판별 조건으로서 직경 내 레코드 수 최소치
         - **직경(Radius)** : 핵심 요소 기준 반경으로서 밀도 영역(Dense Area)의 범위
 
     - **경계 요소(Border)** : 군집 범위의 경계선에 위치한 레코드
@@ -127,7 +219,7 @@
     - `min_samples = 7` : 최소 요소
 
 - **다음의 속성을 통해 훈련된 모델의 정보를 확인할 수 있음**
-    - `labels_` : 예측 결과로서 각 레코드가 속한 군집 번호
+    - `labels_` : 각 레코드가 속한 군집 번호
         - `-1` : 이상치 군집
     
     - `core_sample_indices_` : 군집별 핵심 요소의 행 번호
