@@ -77,6 +77,26 @@
 
 - **정의**
     - 밀도 기반 배타적, 분할적 군집화 알고리즘
+    - 잡음(Noise)을 활용한 밀도 기반(Density-Based) 공간(Spatial) 군집화
+
+- **잡음(Noise)을 활용한 밀도 기반(Density-Based) 공간(Spatial) 군집화**
+    
+    - **K-Means 군집 분석의 한계점**
+        - 이상치를 탐지할 수 없어 해당 값에 의해 `centroid` 가 결정될 수 있음
+    
+    - **DBSCAN 군집 분석의 보완 방안**
+        - 특정 레코드가 특정 군집에 속하는 경우, 해당 군집에 속하는 다른 레코드들과 가까운 위치에 있어야 함을 전제함
+
+- **DBSCAN 의 레코드 구분**
+
+    ![IMG_7115](https://user-images.githubusercontent.com/116495744/224615745-cd9d88fe-c4d4-4f90-9d8c-a989a8ffff3d.PNG)
+
+    - **핵심 요소(Core)** : 밀도의 중심이 되는 레코드
+        - **최소 요소(Minimum number of neighbors)** : 핵심 요소 지정 조건으로서 해당 요소의 직경 내에 레코드가 몇 개 존재해야 하는가
+        - **직경(Radius)** : 핵심 요소 기준 반경으로서 밀도 영역(Dense Area) 혹은 군집의 범위
+
+    - **경계 요소(Border)** : 핵심 요소 반경의 경계선에 위치한 레코드
+    - **잡음 요소(Noise)** : 어떠한 군집에도 속하지 않는 레코드로서 이상치
 
 </details>
 
@@ -97,11 +117,38 @@
 
 ## 💯 평가 지표
 
+<details><summary><h3>V-measure</h3></summary>
+
+- **군집 분석의 목표**
+    - 군집 간 거리는 멀고, 군집 내 레코드 간 거리는 가깝게 군집화하는 것
+
+- **V-measure 의 정의**
+    
+    - 균질성과 완전성의 조화 평균
+        - **균질성(Homogeneity)** : 각 군집(예측값)이 동일한 실제값으로 구성되어 있는 정도
+        - **완전성(Completeness)** : 각 실제값에 대하여 동일한 군집(예측값)으로 구성되어 있는 정도
+
+- **전제**
+    - 군집이 사전에 정의되어 있는 경우 사용함
+    - 군집이 사전에 정의되어 있지 않을 경우에는 후술할 실루엣 계수를 사용함
+
+- **사용 방법**
+
+    ```
+    from sklearn.metrics import homogeneity_score
+    from sklearn.metrics import completeness_score
+    from sklearn.metrics import v_measure_score
+    ```
+
+</details>
+
 <details><summary><h3>실루엣 계수(Silhouette Coefficient)</h3></summary>
 
-- **평가 지표**
-    - **군집 분석의 목표** : 군집 간 거리는 멀고, 군집 내 레코드 간 거리는 가깝게 군집화하는 것
-    - **실루엣 계수(Silhouette Coefficient)** : 
+- **군집 분석의 목표** : 군집 간 거리는 멀고, 군집 내 레코드 간 거리는 가깝게 군집화하는 것
+
+- **실루엣 계수(Silhouette Coefficient)의 정의**
+
+- **사용 방법**
 
 </details>
 
