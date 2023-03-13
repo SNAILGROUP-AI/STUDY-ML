@@ -269,7 +269,7 @@
     - 군집 간 거리는 멀고, 군집 내 레코드 간 거리는 가깝게 군집화하는 것
 
 - **정의**
-
+    
     $$ \begin{align}
     silhouette&=\displaystyle\sum_{i=0}^{n}\frac{s(i)}{n}\\
     s(i)&=\frac{b(i)-a(i)}{max(a(i), b(i))}
