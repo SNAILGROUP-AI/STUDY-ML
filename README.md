@@ -12,11 +12,11 @@
 
 ### supervised
 
-- [**Classification**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/classification.md)
+- [**Classification Analysis**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/classification.md)
 
 - [**Ensemble**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/ensemble.md)
 
-- [**Regression**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/regression.md)
+- [**Regression Analysis**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/regression.md)
 
 - [**Preprocessing**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/preprocessing.md)
 
@@ -24,7 +24,7 @@
 
 ### unsupervised
 
-- [**Cluster**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/cluster.md)
+- [**Cluster Analysis**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/cluster.md)
 
 - [**Dimensionality Reduction**](https://github.com/SNAILGROUP-AI/STUDY-ML/blob/main/description/dr.md)
 
